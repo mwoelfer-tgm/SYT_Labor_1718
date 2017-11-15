@@ -8,10 +8,10 @@ from src.Worker import *
 from src.Model import *
 
 
-class Controller(threading.Thread):
+class Controller():
     def __init__(self):
-        Thread.__init__(self)
-        self.daemon = True
+        #Thread.__init__(self)
+        #self.daemon = True
 
         for i in range(0,10):
             self.add_worker()
@@ -104,7 +104,7 @@ class TaskDispatcher(threading.Thread):
 if __name__ == '__main__':
 
     c = Controller()
-    c.start()
+    #c.start()
 
     while(True):
         response = input("To add a new Worker, write 'A' \n"
