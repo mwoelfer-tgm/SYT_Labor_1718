@@ -1,0 +1,15 @@
+Project Modules
+===============
+   :Author: Martin Woelfer
+   :Status: Finished
+   :Version: 1.0
+   :Date: 2017-11-15
+   :Organization: TGM Wien
+   :Summary: Creates a program which simulates tasks being dispatched to a load balancer which further dispatches this task to a specific worker depending on the load balancing Method. Currently implement methods are 'Least Connection' and 'Agent Based Adaptive Balancing'.
+.. toctree::
+   :maxdepth: 4
+
+   Controller
+   LoadBalancer
+   Model
+   Worker

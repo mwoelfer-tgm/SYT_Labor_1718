@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Controller &#8212; GK_9_2 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="GK_9_2 1.0 documentation" href="../modules.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../modules.html">GK_9_2 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for Controller</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">from</span> <span class="nn">LoadBalancer</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">Model</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">Worker</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<div class="viewcode-block" id="Controller"><a class="viewcode-back" href="../Controller.html#Controller.Controller">[docs]</a><span class="k">class</span> <span class="nc">Controller</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+<div class="viewcode-block" id="Controller.__init__"><a class="viewcode-back" href="../Controller.html#Controller.Controller.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_worker</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">td</span> <span class="o">=</span> <span class="n">TaskDispatcher</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">td</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Controller.add_worker"><a class="viewcode-back" href="../Controller.html#Controller.Controller.add_worker">[docs]</a>    <span class="k">def</span> <span class="nf">add_worker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">get_last_id</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="n">Model</span><span class="o">.</span><span class="n">add_worker</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The worker </span><span class="si">%d</span><span class="s2"> has been aded&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get_id</span><span class="p">()))</span></div>
+
+
+<div class="viewcode-block" id="Controller.print_worker_information"><a class="viewcode-back" href="../Controller.html#Controller.Controller.print_worker_information">[docs]</a>    <span class="k">def</span> <span class="nf">print_worker_information</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_worker</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Information of Worker </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;---------------------------</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;Finished tasks: </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;Remaining tasks: </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;Status: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;Time needed for last task: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;---------------------------</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span>
+              <span class="p">(</span><span class="n">worker</span><span class="o">.</span><span class="n">get_id</span><span class="p">(),</span> <span class="n">worker</span><span class="o">.</span><span class="n">get_tasks_finished</span><span class="p">(),</span> <span class="n">worker</span><span class="o">.</span><span class="n">get_tasks_remaining</span><span class="p">(),</span> <span class="n">worker</span><span class="o">.</span><span class="n">get_load</span><span class="p">()</span> <span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">worker</span><span class="o">.</span><span class="n">get_time_last_task</span><span class="p">())))</span></div>
+
+<div class="viewcode-block" id="Controller.print_all_workers"><a class="viewcode-back" href="../Controller.html#Controller.Controller.print_all_workers">[docs]</a>    <span class="k">def</span> <span class="nf">print_all_workers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">Model</span><span class="o">.</span><span class="n">get_worker</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">print_worker_information</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">get_id</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Controller.delete_worker"><a class="viewcode-back" href="../Controller.html#Controller.Controller.delete_worker">[docs]</a>    <span class="k">def</span> <span class="nf">delete_worker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_worker</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+
+        <span class="n">Model</span><span class="o">.</span><span class="n">delete_worker</span><span class="p">(</span><span class="n">worker</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Worker </span><span class="si">%d</span><span class="s2"> has been deleted&quot;</span> <span class="o">%</span> <span class="n">worker</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Controller.find_worker"><a class="viewcode-back" href="../Controller.html#Controller.Controller.find_worker">[docs]</a>    <span class="k">def</span> <span class="nf">find_worker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="n">worker</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">Model</span><span class="o">.</span><span class="n">get_worker</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">w</span>
+        <span class="k">if</span> <span class="n">worker</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This worker doesn&#39;t exist, please choose another one!&quot;</span><span class="p">)</span>
+            <span class="k">return</span></div>
+
+<div class="viewcode-block" id="Controller.set_time_interval"><a class="viewcode-back" href="../Controller.html#Controller.Controller.set_time_interval">[docs]</a>    <span class="k">def</span> <span class="nf">set_time_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">td</span><span class="o">.</span><span class="n">set_time_interval</span><span class="p">(</span><span class="n">time</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Controller.disable_enable_worker"><a class="viewcode-back" href="../Controller.html#Controller.Controller.disable_enable_worker">[docs]</a>    <span class="k">def</span> <span class="nf">disable_enable_worker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="n">worker</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_worker</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">worker</span><span class="o">.</span><span class="n">get_disabled</span><span class="p">():</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">worker</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Controller.disable_enable_logging"><a class="viewcode-back" href="../Controller.html#Controller.Controller.disable_enable_logging">[docs]</a>    <span class="k">def</span> <span class="nf">disable_enable_logging</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Model</span><span class="o">.</span><span class="n">is_logging</span><span class="p">():</span>
+            <span class="n">Model</span><span class="o">.</span><span class="n">disable_logging</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Model</span><span class="o">.</span><span class="n">enable_logging</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Controller.set_least_connection"><a class="viewcode-back" href="../Controller.html#Controller.Controller.set_least_connection">[docs]</a>    <span class="k">def</span> <span class="nf">set_least_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">td</span><span class="o">.</span><span class="n">set_load_balancer</span><span class="p">(</span><span class="n">LeastConnection</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Controller.set_agent_based"><a class="viewcode-back" href="../Controller.html#Controller.Controller.set_agent_based">[docs]</a>    <span class="k">def</span> <span class="nf">set_agent_based</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">td</span><span class="o">.</span><span class="n">set_load_balancer</span><span class="p">(</span><span class="n">AgentBasedAdaptiveBalancing</span><span class="p">())</span></div></div>
+
+<div class="viewcode-block" id="TaskDispatcher"><a class="viewcode-back" href="../Controller.html#Controller.TaskDispatcher">[docs]</a><span class="k">class</span> <span class="nc">TaskDispatcher</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+<div class="viewcode-block" id="TaskDispatcher.__init__"><a class="viewcode-back" href="../Controller.html#Controller.TaskDispatcher.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lb</span> <span class="o">=</span> <span class="n">AgentBasedAdaptiveBalancing</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_interval</span> <span class="o">=</span> <span class="mf">0.5</span></div>
+
+<div class="viewcode-block" id="TaskDispatcher.run"><a class="viewcode-back" href="../Controller.html#Controller.TaskDispatcher.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+            <span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lb</span><span class="o">.</span><span class="n">distribute</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_interval</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TaskDispatcher.set_time_interval"><a class="viewcode-back" href="../Controller.html#Controller.TaskDispatcher.set_time_interval">[docs]</a>    <span class="k">def</span> <span class="nf">set_time_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_interval</span> <span class="o">=</span> <span class="n">time</span></div>
+
+<div class="viewcode-block" id="TaskDispatcher.set_load_balancer"><a class="viewcode-back" href="../Controller.html#Controller.TaskDispatcher.set_load_balancer">[docs]</a>    <span class="k">def</span> <span class="nf">set_load_balancer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lb</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lb</span> <span class="o">=</span> <span class="n">lb</span></div></div>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="n">c</span> <span class="o">=</span> <span class="n">Controller</span><span class="p">()</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;To add a new Worker, write &#39;A&#39; </span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To get information of a Worker, write &#39;I #id&#39; </span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To delete a Worker, write &#39;X #id&#39; </span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To list all Worker&#39;s information, write &#39;S&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To set time interval between each task dispatch, write &#39;T #seconds&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To disable\enable a Worker, write &#39;D #id&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To enable\disable logging, write &#39;L&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To use the LeastConnection method, write &#39;LC&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To use the AgentBasedAdaptiveBalancing method, write &#39;AB&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To disable\enable a Worker, write &#39;D #id&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+              <span class="s2">&quot;To exit the program, write &#39;E&#39;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">add_worker</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;I&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">print_worker_information</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">2</span><span class="p">:]))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If you want to see information of a worker, please specify a valid id with the format &#39;I #id&#39;&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;X&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">delete_worker</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">2</span><span class="p">:]))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If you want to delete a worker, please specify a valid id with the format &#39;D #id&#39;&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">disable_enable_logging</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">print_all_workers</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;LC&#39;</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">set_least_connection</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">response</span> <span class="o">==</span> <span class="s1">&#39;AB&#39;</span><span class="p">:</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">set_agent_based</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">set_time_interval</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">2</span><span class="p">:]))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If you want to set the time interval, please specify a valid time with the format &#39;T #seconds&#39;&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">c</span><span class="o">.</span><span class="n">disable_enable_worker</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">2</span><span class="p">:]))</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;If you want to set the time interval, please specify a valid time with the format &#39;T #seconds&#39;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please give a valid command&quot;</span><span class="p">)</span>
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../modules.html">GK_9_2 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Martin Woelfer.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

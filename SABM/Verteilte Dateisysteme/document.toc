@@ -1,0 +1,5 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Aufgabenstellung}{1}{section.1}
+\contentsline {section}{\numberline {2}Ubuntu Server aufsetzen}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Nat-Netzwerk}{1}{subsection.2.1}
+\contentsline {section}{\numberline {3}DNS Aufl\IeC {\"o}sung konfigurieren}{2}{section.3}

@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LoadBalancer &#8212; GK_9_2 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="GK_9_2 1.0 documentation" href="../modules.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../modules.html">GK_9_2 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for LoadBalancer</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">Model</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">ABC</span>
+
+<div class="viewcode-block" id="LoadBalancer"><a class="viewcode-back" href="../LoadBalancer.html#LoadBalancer.LoadBalancer">[docs]</a><span class="k">class</span> <span class="nc">LoadBalancer</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="n">determined_worker</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="LoadBalancer.distribute"><a class="viewcode-back" href="../LoadBalancer.html#LoadBalancer.LoadBalancer.distribute">[docs]</a>    <span class="k">def</span> <span class="nf">distribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">load</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Model</span><span class="o">.</span><span class="n">is_logging</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tasks finished by workers: &quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">get_tasks_finished</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Model</span><span class="o">.</span><span class="n">get_worker</span><span class="p">()]))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tasks received by workers: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">get_tasks_received</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Model</span><span class="o">.</span><span class="n">get_worker</span><span class="p">()]))</span></div></div>
+
+<div class="viewcode-block" id="LeastConnection"><a class="viewcode-back" href="../LoadBalancer.html#LoadBalancer.LeastConnection">[docs]</a><span class="k">class</span> <span class="nc">LeastConnection</span><span class="p">(</span><span class="n">LoadBalancer</span><span class="p">):</span>
+<div class="viewcode-block" id="LeastConnection.distribute"><a class="viewcode-back" href="../LoadBalancer.html#LoadBalancer.LeastConnection.distribute">[docs]</a>    <span class="k">def</span> <span class="nf">distribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">load</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">distribute</span><span class="p">(</span><span class="n">load</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">Model</span><span class="o">.</span><span class="n">is_logging</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current Mode: Least Connection</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">determined_worker</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">get_worker</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">get_tasks_received</span><span class="p">())</span>
+
+        <span class="n">determined_worker</span><span class="o">.</span><span class="n">do_task</span><span class="p">(</span><span class="n">load</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="AgentBasedAdaptiveBalancing"><a class="viewcode-back" href="../LoadBalancer.html#LoadBalancer.AgentBasedAdaptiveBalancing">[docs]</a><span class="k">class</span> <span class="nc">AgentBasedAdaptiveBalancing</span><span class="p">(</span><span class="n">LoadBalancer</span><span class="p">):</span>
+<div class="viewcode-block" id="AgentBasedAdaptiveBalancing.distribute"><a class="viewcode-back" href="../LoadBalancer.html#LoadBalancer.AgentBasedAdaptiveBalancing.distribute">[docs]</a>    <span class="k">def</span> <span class="nf">distribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">load</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">distribute</span><span class="p">(</span><span class="n">load</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">Model</span><span class="o">.</span><span class="n">is_logging</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current Mode: Agent Based Adaptive Balancing</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">determined_worker</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">get_worker</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">get_load</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="n">determined_worker</span><span class="o">.</span><span class="n">get_load</span><span class="p">()</span> <span class="o">==</span> <span class="mi">101</span> <span class="ow">or</span> <span class="n">determined_worker</span><span class="o">.</span><span class="n">get_load</span><span class="p">()</span> <span class="o">==</span> <span class="mi">99</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Task was dismissed because all Workers are overloaded!&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">determined_worker</span><span class="o">.</span><span class="n">do_task</span><span class="p">(</span><span class="n">load</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../modules.html">GK_9_2 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Martin Woelfer.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

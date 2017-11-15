@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Worker Module &#8212; GK_9_2 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="GK_9_2 1.0 documentation" href="modules.html" />
+    <link rel="prev" title="Model Module" href="Model.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Model.html" title="Model Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="modules.html">GK_9_2 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="worker-module">
+<h1>Worker Module<a class="headerlink" href="#worker-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><a class="reference internal" href="#module-Worker" title="Worker"><code class="xref py py-mod docutils literal"><span class="pre">Worker</span></code></a> Module<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-Worker"></span><dl class="class">
+<dt id="Worker.Worker">
+<em class="property">class </em><code class="descclassname">Worker.</code><code class="descname">Worker</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></p>
+<dl class="method">
+<dt id="Worker.Worker.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.curr_number">
+<code class="descname">curr_number</code><em class="property"> = 1</em><a class="headerlink" href="#Worker.Worker.curr_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.desired_number">
+<code class="descname">desired_number</code><em class="property"> = 0</em><a class="headerlink" href="#Worker.Worker.desired_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.disable">
+<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.disable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.disable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.do_task">
+<code class="descname">do_task</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.do_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.do_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.enable">
+<code class="descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.enable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.enable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_disabled">
+<code class="descname">get_disabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_disabled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_id">
+<code class="descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_load">
+<code class="descname">get_load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_result">
+<code class="descname">get_result</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_result"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_tasks_finished">
+<code class="descname">get_tasks_finished</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_tasks_finished"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_tasks_finished" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_tasks_received">
+<code class="descname">get_tasks_received</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_tasks_received"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_tasks_received" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_tasks_remaining">
+<code class="descname">get_tasks_remaining</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_tasks_remaining"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_tasks_remaining" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.get_time_last_task">
+<code class="descname">get_time_last_task</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.get_time_last_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.get_time_last_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.is_disabled">
+<code class="descname">is_disabled</code><em class="property"> = False</em><a class="headerlink" href="#Worker.Worker.is_disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.progress">
+<code class="descname">progress</code><em class="property"> = 0</em><a class="headerlink" href="#Worker.Worker.progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Worker.Worker.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Worker.html#Worker.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Worker.Worker.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.tasks_finished">
+<code class="descname">tasks_finished</code><em class="property"> = 0</em><a class="headerlink" href="#Worker.Worker.tasks_finished" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.tasks_received">
+<code class="descname">tasks_received</code><em class="property"> = 0</em><a class="headerlink" href="#Worker.Worker.tasks_received" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Worker.Worker.time_last_task">
+<code class="descname">time_last_task</code><em class="property"> = 0</em><a class="headerlink" href="#Worker.Worker.time_last_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="modules.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Worker Module</a><ul>
+<li><a class="reference internal" href="#id1"><code class="docutils literal"><span class="pre">Worker</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Model.html"
+                        title="previous chapter">Model Module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Worker.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="Model.html" title="Model Module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="modules.html">GK_9_2 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Martin Woelfer.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>
