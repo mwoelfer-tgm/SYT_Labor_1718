@@ -1,9 +1,12 @@
-import threading
-from LoadBalancer import *
-from Model import *
-from Worker import *
-import time
 import sys
+import threading
+import time
+
+from src.LoadBalancer import *
+from src.Worker import *
+
+from src.Model import *
+
 
 class Controller(threading.Thread):
     def __init__(self):

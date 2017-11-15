@@ -1,5 +1,7 @@
-from Model import *
 from abc import ABC
+
+from src.Model import *
+
 
 class LoadBalancer(ABC):
     determined_worker = None
