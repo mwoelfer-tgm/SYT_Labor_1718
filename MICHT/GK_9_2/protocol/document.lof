@@ -1,6 +1,7 @@
 \select@language {ngerman}
 \contentsline {figure}{\numberline {1}{\ignorespaces Klassendiagramm\relax }}{2}{figure.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Belastungstest von CPU und RAM\relax }}{5}{figure.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Belastungstest von CPU und RAM nach l\IeC {\"a}ngerer Belastung\relax }}{5}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Agent Based Adaptive Balancing\relax }}{6}{table.caption.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Least Connection Balancing\relax }}{6}{table.caption.4}
+\contentsline {figure}{\numberline {2}{\ignorespaces Ein Command Line interface ist bereitgestellt f\IeC {\"u}r den User\relax }}{3}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Belastungstest von CPU und RAM\relax }}{6}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Belastungstest von CPU und RAM nach l\IeC {\"a}ngerer Belastung\relax }}{6}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Agent Based Adaptive Balancing\relax }}{7}{table.caption.4}
+\contentsline {figure}{\numberline {6}{\ignorespaces Least Connection Balancing\relax }}{7}{table.caption.4}
