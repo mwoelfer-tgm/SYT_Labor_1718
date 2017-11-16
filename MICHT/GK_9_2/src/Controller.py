@@ -85,7 +85,7 @@ class TaskDispatcher(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.daemon = True
-        self.lb = AgentBasedAdaptiveBalancing()
+        self.lb = LeastConnection()
         self.time_interval = 0.5
 
     def run(self):
