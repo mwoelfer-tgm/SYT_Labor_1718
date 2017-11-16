@@ -16,8 +16,30 @@
 Das Klassendiagramm zeigt die Relationen zwischen den einzelnen Klassen. 
 
 \subsection{Controller}
-Der Controller kümmert sich um die Instanziierung der Klassen und kümmert sich um die User-Eingaben.
-Im Controller ist zusätzlich das User-Interface zu finden, welches in einer Endlosschleife User eingaben entgegennimmt und dem Controller übergibt und dieser dann an die zugehörigen Klassen weiterleitet. 
+Der Controller kümmert sich um die Instanziierung der Klassen und um die User-Eingaben.
+Im Controller ist zusätzlich das User-Interface zu finden, welches in einer Endlosschleife User eingaben entgegennimmt und dem Controller übergibt und dieser dann an die zugehörigen Klassen weiterleitet.
+
+\subsection{CLI Interface}
+ \begin{minipage}{\linewidth}
+ 	\centering
+ 	\includegraphics[width=0.8\linewidth]{images/cli_interface}
+ 	\figcaption{Ein Command Line interface ist bereitgestellt für den User}
+ \end{minipage}
+ 
+ Der User kann folgende Tätigkeiten ausführen:
+ 
+ \begin{itemize}
+ 	\item einen neuen \verb|Worker| hinzufügen
+ 	\item die Information von einem bestimmten \verb|Worker| ausgeben
+ 	\item einen \verb|Worker| löschen
+ 	\item die Informationen von allen \verb|Worker| ausgeben
+	\item den Zeit-Interval bestimmten in welchen die Tasks an den Load Balancer übergeben werden
+	\item einen \verb|Worker| an oder ausschalten
+	\item Logging an oder ausschalten
+	\item die LeastConnection balancing methode verwenden
+	\item die AgentBasedAdaptiveBalancing methode verwenden
+	\item das Programm beenden
+ \end{itemize}
 
 \subsection{Model}
 Das Model hält alle relevanten Daten. Da es in Python keine statischen Klassen gibt, werden alle Methoden als statische methode mit der Annotation \verb|@staticmethod| versehen, um Zugriff auf die Funktionen ohne Instanziierung zu ermöglichen.

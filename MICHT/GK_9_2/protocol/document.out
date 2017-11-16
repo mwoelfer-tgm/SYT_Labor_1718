@@ -5,20 +5,21 @@
 \BOOKMARK [1][-]{section.2}{Ergebnisse}{}% 5
 \BOOKMARK [2][-]{subsection.2.1}{Projektaufbau}{section.2}% 6
 \BOOKMARK [2][-]{subsection.2.2}{Controller}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.3}{Model}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.4}{TaskDispatcher}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.5}{Worker}{section.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.5.1}{get\137load\(\)}{subsection.2.5}% 11
-\BOOKMARK [2][-]{subsection.2.6}{LoadBalancer}{section.2}% 12
-\BOOKMARK [3][-]{subsubsection.2.6.1}{LeastConnection}{subsection.2.6}% 13
-\BOOKMARK [3][-]{subsubsection.2.6.2}{AgentBasedAdaptiveBalancing}{subsection.2.6}% 14
-\BOOKMARK [2][-]{subsection.2.7}{Belastungstests}{section.2}% 15
-\BOOKMARK [2][-]{subsection.2.8}{Konkrete Fragestellungen}{section.2}% 16
-\BOOKMARK [3][-]{subsubsection.2.8.1}{Vergleichen Sie die verwendeten Load Balancing Methoden und stellen Sie diese gegen\374ber.}{subsection.2.8}% 17
-\BOOKMARK [3][-]{subsubsection.2.8.2}{Was kann als Gewichtung bei Weighted Round Robin verwendet werden?}{subsection.2.8}% 18
-\BOOKMARK [3][-]{subsubsection.2.8.3}{Warum stellt die "Hochverf\374gbarkeit"von IT Systemen in der heutigen Zeit eine sehr wichtige Eigenschaft dar?}{subsection.2.8}% 19
-\BOOKMARK [3][-]{subsubsection.2.8.4}{Welche anderen Massnahmen neben einer Lastverteilung m\374ssen getroffen werden, um die "Hochverf\374gbarkeit\337icher zu stellen?}{subsection.2.8}% 20
-\BOOKMARK [3][-]{subsubsection.2.8.5}{Was versteht man unter SSession Persistenz\374nd welche Schwierigkeiten ergeben sich damit?}{subsection.2.8}% 21
-\BOOKMARK [3][-]{subsubsection.2.8.6}{Nennen Sie jeweils ein Beispiel, wo Session Persistenz notwendig bzw. nicht notwendig ist.}{subsection.2.8}% 22
-\BOOKMARK [3][-]{subsubsection.2.8.7}{Welcher Unterschied besteht zwischen einer \337erver-side"bzw "client-side"Lastverteilungsl\366sung?}{subsection.2.8}% 23
-\BOOKMARK [3][-]{subsubsection.2.8.8}{Was versteht man unter dem "Mega-Proxy-Problem"?}{subsection.2.8}% 24
+\BOOKMARK [2][-]{subsection.2.3}{CLI Interface}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Model}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{TaskDispatcher}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.6}{Worker}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.6.1}{get\137load\(\)}{subsection.2.6}% 12
+\BOOKMARK [2][-]{subsection.2.7}{LoadBalancer}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.7.1}{LeastConnection}{subsection.2.7}% 14
+\BOOKMARK [3][-]{subsubsection.2.7.2}{AgentBasedAdaptiveBalancing}{subsection.2.7}% 15
+\BOOKMARK [2][-]{subsection.2.8}{Belastungstests}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.9}{Konkrete Fragestellungen}{section.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.9.1}{Vergleichen Sie die verwendeten Load Balancing Methoden und stellen Sie diese gegen\374ber.}{subsection.2.9}% 18
+\BOOKMARK [3][-]{subsubsection.2.9.2}{Was kann als Gewichtung bei Weighted Round Robin verwendet werden?}{subsection.2.9}% 19
+\BOOKMARK [3][-]{subsubsection.2.9.3}{Warum stellt die "Hochverf\374gbarkeit"von IT Systemen in der heutigen Zeit eine sehr wichtige Eigenschaft dar?}{subsection.2.9}% 20
+\BOOKMARK [3][-]{subsubsection.2.9.4}{Welche anderen Massnahmen neben einer Lastverteilung m\374ssen getroffen werden, um die "Hochverf\374gbarkeit\337icher zu stellen?}{subsection.2.9}% 21
+\BOOKMARK [3][-]{subsubsection.2.9.5}{Was versteht man unter SSession Persistenz\374nd welche Schwierigkeiten ergeben sich damit?}{subsection.2.9}% 22
+\BOOKMARK [3][-]{subsubsection.2.9.6}{Nennen Sie jeweils ein Beispiel, wo Session Persistenz notwendig bzw. nicht notwendig ist.}{subsection.2.9}% 23
+\BOOKMARK [3][-]{subsubsection.2.9.7}{Welcher Unterschied besteht zwischen einer \337erver-side"bzw "client-side"Lastverteilungsl\366sung?}{subsection.2.9}% 24
+\BOOKMARK [3][-]{subsubsection.2.9.8}{Was versteht man unter dem "Mega-Proxy-Problem"?}{subsection.2.9}% 25
