@@ -1,4 +1,4 @@
-# GK9.3 "Cloud-Datenmanagement
+# GK9.3 "Cloud-Datenmanagement"
 
 ## Prerequisites
 - JDK 1.7 or later
