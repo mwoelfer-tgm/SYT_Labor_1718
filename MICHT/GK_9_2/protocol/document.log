@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.13)  16 NOV 2017 08:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.13)  16 NOV 2017 13:18
 entering extended mode
 **./document.tex
 (document.tex
@@ -1025,13 +1025,7 @@ Package babel Info: Redefining ngerman shorthand "~
  [1
 
 {C:/Users/Bernd/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/jd
-IT_tgm.png>]) (document.toc
-Overfull \hbox (83.89265pt too wide) in paragraph at lines 25--25
- [][] [][][]\T1/cmr/m/n/12 Welcher Un-ter-schied be-steht zwi-schen ei-ner ÿerv
-er-side"bzw "client-side"Lastverteilungslösung?[][] [][]  
- []
-
-)
+IT_tgm.png>]) (document.toc)
 \tf@toc=\write5
 \openout5 = `document.toc'.
 
@@ -1087,7 +1081,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 8.
 
-<images/class_diagram.png, id=183, 948.54375pt x 543.53062pt>
+<images/class_diagram.png, id=184, 948.54375pt x 543.53062pt>
 File: images/class_diagram.png Graphic file (type png)
 
 <use images/class_diagram.png>
@@ -1107,7 +1101,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 22.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 22.
-<images/cli_interface.png, id=184, 362.85562pt x 143.78719pt>
+<images/cli_interface.png, id=185, 362.85562pt x 143.78719pt>
 File: images/cli_interface.png Graphic file (type png)
 
 <use images/cli_interface.png>
@@ -1206,7 +1200,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 134.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 134.
- [5] <images/belastung.png, id=234, 590.205pt x 87.32625pt>
+ [5] <images/belastung.png, id=235, 590.205pt x 87.32625pt>
 File: images/belastung.png Graphic file (type png)
 
 <use images/belastung.png>
@@ -1218,7 +1212,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 140.
 See the caption package documentation for explanation.
 
-<images/belastung2.png, id=235, 589.4522pt x 82.80937pt>
+<images/belastung2.png, id=236, 589.4522pt x 82.80937pt>
 File: images/belastung2.png Graphic file (type png)
 
 <use images/belastung2.png>
@@ -1238,13 +1232,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 154.
-<images/AB.png, id=236, 306.39468pt x 398.99063pt>
+<images/AB.png, id=237, 306.39468pt x 398.99063pt>
 File: images/AB.png Graphic file (type png)
  <use images/AB.png>
 Package pdftex.def Info: images/AB.png used on input line 162.
 (pdftex.def)             Requested size: 250.24199pt x 325.8655pt.
 
-<images/LC.png, id=237, 304.13625pt x 397.485pt>
+<images/LC.png, id=238, 304.13625pt x 397.485pt>
 File: images/LC.png Graphic file (type png)
  <use images/LC.png>
 Package pdftex.def Info: images/LC.png used on input line 168.
@@ -1292,23 +1286,22 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 196.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 197.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 197.
-
-Overfull \hbox (100.86464pt too wide) in paragraph at lines 198--198
-[]\T1/cmr/bx/n/12 Welcher Un-ter-schied be-steht zwi-schen ei-ner ÿerver-side"b
-zw "client-side"Lastverteilungslösung? 
- []
-
-Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 198.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 198.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 202.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 199.
+(babel)             in language  on input line 202.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 202.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 206.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 206.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 68.
@@ -1338,15 +1331,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
  (document.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
-Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 78D9D54FEC5948613A3E21DE09AF750C;2303.
+
+
+Package rerunfilecheck Warning: File `document.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `document.out':
+(rerunfilecheck)             Before: 7D71B26C45ACFE7E1D3E866E6B2DDC1D;2299
+(rerunfilecheck)             After:  06EBC04E95C4212DF8C6B4B1CE60CD9F;2306.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 12359 strings out of 493334
- 177545 string characters out of 3136672
- 363086 words of memory out of 3000000
- 15566 multiletter control sequences out of 15000+200000
+ 12367 strings out of 493334
+ 177613 string characters out of 3136672
+ 364183 words of memory out of 3000000
+ 15574 multiletter control sequences out of 15000+200000
  15742 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,15n,77p,577b,1979s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1364,9 +1364,9 @@ pk> <C:\Users\Bernd\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ec\dpi600\ecbx1728.pk> <C:\Users\Bernd\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
 r\jknappen\ec\dpi600\ecbx2488.pk><F:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/ccicons/ccicons.pfb>
-Output written on document.pdf (11 pages, 311654 bytes).
+Output written on document.pdf (11 pages, 306343 bytes).
 PDF statistics:
- 702 PDF objects out of 1000 (max. 8388607)
+ 701 PDF objects out of 1000 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
  236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

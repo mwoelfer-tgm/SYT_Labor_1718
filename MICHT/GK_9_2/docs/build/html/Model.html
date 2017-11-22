@@ -17,7 +17,8 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -25,7 +26,6 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="GK_9_2 1.0 documentation" href="modules.html" />
     <link rel="next" title="Worker Module" href="Worker.html" />
     <link rel="prev" title="LoadBalancer Module" href="LoadBalancer.html" /> 
   </head>
@@ -62,40 +62,90 @@
 <dt id="Model.Model">
 <em class="property">class </em><code class="descclassname">Model.</code><code class="descname">Model</code><a class="reference internal" href="_modules/Model.html#Model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The model holds all the relevant data. Since there are no static classes in python, the methods have to annotated
+with the &#64;staticmethod annotation in order to access the functions without an instance.</p>
 <dl class="staticmethod">
 <dt id="Model.Model.add_worker">
 <em class="property">static </em><code class="descname">add_worker</code><span class="sig-paren">(</span><em>w</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.add_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.add_worker" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>w</strong> &#8211; the worker to be added to the worker list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="Model.Model.delete_worker">
 <em class="property">static </em><code class="descname">delete_worker</code><span class="sig-paren">(</span><em>w</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.delete_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.delete_worker" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>w</strong> &#8211; the worker to be deleted from the worker list</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="Model.Model.disable_logging">
 <em class="property">static </em><code class="descname">disable_logging</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.disable_logging"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.disable_logging" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>sets the logging member to False
+:return: None</p>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="Model.Model.enable_logging">
 <em class="property">static </em><code class="descname">enable_logging</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.enable_logging"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.enable_logging" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>sets the logging member to True
+:return: None</p>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="Model.Model.get_last_id">
 <em class="property">static </em><code class="descname">get_last_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.get_last_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.get_last_id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the id of the last worker added to the list as an int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="Model.Model.get_worker">
 <em class="property">static </em><code class="descname">get_worker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.get_worker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.get_worker" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the list of Worker threads</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="staticmethod">
 <dt id="Model.Model.is_logging">
 <em class="property">static </em><code class="descname">is_logging</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/Model.html#Model.is_logging"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Model.Model.is_logging" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the logging member whether it&#8217;s True or False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="Model.Model.logging">
@@ -135,7 +185,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Model.txt"
+      <li><a href="_sources/Model.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -173,7 +223,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Martin Woelfer.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

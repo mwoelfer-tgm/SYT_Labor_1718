@@ -17,7 +17,8 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -25,7 +26,6 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="GK_9_2 1.0 documentation" href="modules.html" />
     <link rel="next" title="Model Module" href="Model.html" />
     <link rel="prev" title="Controller Module" href="Controller.html" /> 
   </head>
@@ -62,6 +62,7 @@
 <dt id="LoadBalancer.AgentBasedAdaptiveBalancing">
 <em class="property">class </em><code class="descclassname">LoadBalancer.</code><code class="descname">AgentBasedAdaptiveBalancing</code><a class="reference internal" href="_modules/LoadBalancer.html#AgentBasedAdaptiveBalancing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LoadBalancer.AgentBasedAdaptiveBalancing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#LoadBalancer.LoadBalancer" title="LoadBalancer.LoadBalancer"><code class="xref py py-class docutils literal"><span class="pre">LoadBalancer.LoadBalancer</span></code></a></p>
+<p>This load balancing method decides which worker to forward the task depending on the load this worker provides</p>
 <dl class="method">
 <dt id="LoadBalancer.AgentBasedAdaptiveBalancing.distribute">
 <code class="descname">distribute</code><span class="sig-paren">(</span><em>load</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LoadBalancer.html#AgentBasedAdaptiveBalancing.distribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LoadBalancer.AgentBasedAdaptiveBalancing.distribute" title="Permalink to this definition">¶</a></dt>
@@ -73,6 +74,8 @@
 <dt id="LoadBalancer.LeastConnection">
 <em class="property">class </em><code class="descclassname">LoadBalancer.</code><code class="descname">LeastConnection</code><a class="reference internal" href="_modules/LoadBalancer.html#LeastConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LoadBalancer.LeastConnection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#LoadBalancer.LoadBalancer" title="LoadBalancer.LoadBalancer"><code class="xref py py-class docutils literal"><span class="pre">LoadBalancer.LoadBalancer</span></code></a></p>
+<p>This load balancing method decides which worker to forward the task depending on the amount of tasks this worker
+has already received</p>
 <dl class="method">
 <dt id="LoadBalancer.LeastConnection.distribute">
 <code class="descname">distribute</code><span class="sig-paren">(</span><em>load</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LoadBalancer.html#LeastConnection.distribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LoadBalancer.LeastConnection.distribute" title="Permalink to this definition">¶</a></dt>
@@ -84,15 +87,18 @@
 <dt id="LoadBalancer.LoadBalancer">
 <em class="property">class </em><code class="descclassname">LoadBalancer.</code><code class="descname">LoadBalancer</code><a class="reference internal" href="_modules/LoadBalancer.html#LoadBalancer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LoadBalancer.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">abc.ABC</span></code></p>
-<dl class="attribute">
-<dt id="LoadBalancer.LoadBalancer.determined_worker">
-<code class="descname">determined_worker</code><em class="property"> = None</em><a class="headerlink" href="#LoadBalancer.LoadBalancer.determined_worker" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<p>Since there are no interfaces in python, the LoadBalncer is defined as an Abstract Base Class (ABC).</p>
+<p>The method distribute() gets predefined and also some sort of logging gets also implemented for the inhereting
+classes to use.</p>
+<p>Basically the load balancer decides which worker gets the task on the metrics these workers provide, depending
+on the load balancing method.</p>
 <dl class="method">
 <dt id="LoadBalancer.LoadBalancer.distribute">
 <code class="descname">distribute</code><span class="sig-paren">(</span><em>load</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/LoadBalancer.html#LoadBalancer.distribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#LoadBalancer.LoadBalancer.distribute" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>predefine the distribute method for the inhereting classes
+:param load: the load which gets processed by the worker
+:return: None</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -122,7 +128,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/LoadBalancer.txt"
+      <li><a href="_sources/LoadBalancer.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -160,7 +166,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Martin Woelfer.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

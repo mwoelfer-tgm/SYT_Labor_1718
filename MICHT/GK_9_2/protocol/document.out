@@ -17,9 +17,9 @@
 \BOOKMARK [2][-]{subsection.2.9}{Konkrete Fragestellungen}{section.2}% 17
 \BOOKMARK [3][-]{subsubsection.2.9.1}{Vergleichen Sie die verwendeten Load Balancing Methoden und stellen Sie diese gegen\374ber.}{subsection.2.9}% 18
 \BOOKMARK [3][-]{subsubsection.2.9.2}{Was kann als Gewichtung bei Weighted Round Robin verwendet werden?}{subsection.2.9}% 19
-\BOOKMARK [3][-]{subsubsection.2.9.3}{Warum stellt die "Hochverf\374gbarkeit"von IT Systemen in der heutigen Zeit eine sehr wichtige Eigenschaft dar?}{subsection.2.9}% 20
-\BOOKMARK [3][-]{subsubsection.2.9.4}{Welche anderen Massnahmen neben einer Lastverteilung m\374ssen getroffen werden, um die "Hochverf\374gbarkeit\337icher zu stellen?}{subsection.2.9}% 21
-\BOOKMARK [3][-]{subsubsection.2.9.5}{Was versteht man unter SSession Persistenz\374nd welche Schwierigkeiten ergeben sich damit?}{subsection.2.9}% 22
+\BOOKMARK [3][-]{subsubsection.2.9.3}{Warum stellt die Hochverf\374gbarkeit von IT Systemen in der heutigen Zeit eine sehr wichtige Eigenschaft dar?}{subsection.2.9}% 20
+\BOOKMARK [3][-]{subsubsection.2.9.4}{Welche anderen Massnahmen neben einer Lastverteilung m\374ssen getroffen werden, um die ''Hochverf\374gbarkeit'' sicher zu stellen?}{subsection.2.9}% 21
+\BOOKMARK [3][-]{subsubsection.2.9.5}{Was versteht man unter Session Persistenz und welche Schwierigkeiten ergeben sich damit?}{subsection.2.9}% 22
 \BOOKMARK [3][-]{subsubsection.2.9.6}{Nennen Sie jeweils ein Beispiel, wo Session Persistenz notwendig bzw. nicht notwendig ist.}{subsection.2.9}% 23
-\BOOKMARK [3][-]{subsubsection.2.9.7}{Welcher Unterschied besteht zwischen einer \337erver-side"bzw "client-side"Lastverteilungsl\366sung?}{subsection.2.9}% 24
-\BOOKMARK [3][-]{subsubsection.2.9.8}{Was versteht man unter dem "Mega-Proxy-Problem"?}{subsection.2.9}% 25
+\BOOKMARK [3][-]{subsubsection.2.9.7}{Welcher Unterschied besteht zwischen einer ''server-side'' bzw ''client-side'' Lastverteilungsl\366sung?}{subsection.2.9}% 24
+\BOOKMARK [3][-]{subsubsection.2.9.8}{Was versteht man unter dem ''Mega-Proxy-Problem''?}{subsection.2.9}% 25

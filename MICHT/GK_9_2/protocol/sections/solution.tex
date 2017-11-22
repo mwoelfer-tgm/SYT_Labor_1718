@@ -20,26 +20,26 @@ Der Controller kümmert sich um die Instanziierung der Klassen und um die User-E
 Im Controller ist zusätzlich das User-Interface zu finden, welches in einer Endlosschleife User eingaben entgegennimmt und dem Controller übergibt und dieser dann an die zugehörigen Klassen weiterleitet.
 
 \subsection{CLI Interface}
- \begin{minipage}{\linewidth}
- 	\centering
- 	\includegraphics[width=0.8\linewidth]{images/cli_interface}
- 	\figcaption{Ein Command Line interface ist bereitgestellt für den User}
- \end{minipage}
- 
- Der User kann folgende Tätigkeiten ausführen:
- 
- \begin{itemize}
- 	\item einen neuen \verb|Worker| hinzufügen
- 	\item die Information von einem bestimmten \verb|Worker| ausgeben
- 	\item einen \verb|Worker| löschen
- 	\item die Informationen von allen \verb|Worker| ausgeben
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/cli_interface}
+	\figcaption{Ein Command Line interface ist bereitgestellt für den User}
+\end{minipage}
+
+Der User kann folgende Tätigkeiten ausführen:
+
+\begin{itemize}
+	\item einen neuen \verb|Worker| hinzufügen
+	\item die Information von einem bestimmten \verb|Worker| ausgeben
+	\item einen \verb|Worker| löschen
+	\item die Informationen von allen \verb|Worker| ausgeben
 	\item den Zeit-Interval bestimmten in welchen die Tasks an den Load Balancer übergeben werden
 	\item einen \verb|Worker| an oder ausschalten
 	\item Logging an oder ausschalten
 	\item die LeastConnection balancing methode verwenden
 	\item die AgentBasedAdaptiveBalancing methode verwenden
 	\item das Programm beenden
- \end{itemize}
+\end{itemize}
 
 \subsection{Model}
 Das Model hält alle relevanten Daten. Da es in Python keine statischen Klassen gibt, werden alle Methoden als statische methode mit der Annotation \verb|@staticmethod| versehen, um Zugriff auf die Funktionen ohne Instanziierung zu ermöglichen.
@@ -74,13 +74,13 @@ Falls der Arbeiter \verb|disabled| ist, also extern abgeschalten wurde, wird der
 
 \begin{lstlisting}[language=python]
 if load == 100:
-	return 0
+return 0
 elif self.is_disabled:
-	return 101
+return 101
 elif self.__q.qsize() > 1:
-	return 99
+return 99
 else:
-	return load
+return load
 \end{lstlisting}
 \subsection{LoadBalancer}
 Da es in Python keine Interfaces gibt, wird die LoadBalancer klasse als \verb|Abstract Base Class|(ABC) definiert. Es wird die methode \verb|distribute()| vorgegeben, in welcher bereits Code für das Logging vorhanden ist und vererbt werden kann.
@@ -101,7 +101,7 @@ determined_worker.do_task(load)
 Laut folgender \underline{\textbf{\href{https://support.kemptechnologies.com/hc/en-us/articles/115005405746-API-for-Agent-Based-Adaptive-Balancing}{Seite}}} müssen folgende Bedingung gegeben sein vom Worker:
 
 \begin{quote}
-Each server machine has to provide a file that contains a numeric value in the range between 0 and 102 representing the actual load on this server (0 = idle, 99 = overload, 101 = server down, 102 = administratively disabled).
+	Each server machine has to provide a file that contains a numeric value in the range between 0 and 102 representing the actual load on this server (0 = idle, 99 = overload, 101 = server down, 102 = administratively disabled).
 \end{quote}
 
 Nun wird dieser Wert nicht über ein File übergeben, sondern über \verb|get_load()|.
@@ -116,18 +116,18 @@ Zusätzlich wird überprüft, falls jener Worker mit der niedrigsten \verb|load|
 
 \begin{lstlisting}[language=python]
 if determined_worker.get_load() == 101 or determined_worker.get_load() == 99:
-	print("Task was dismissed because all Workers are overloaded or disabled!")
-	return
+print(''Task was dismissed because all Workers are overloaded or disabled!'')
+return
 else:
-	determined_worker.do_task(load)
+determined_worker.do_task(load)
 \end{lstlisting}
 
 \subsection{Belastungstests}
 Es wurde beim Logging die CPU-Usage, die generelle RAM-Usage und die RAM-Usage vom Programm hinzugefügt. Dafür wurde das Package \verb|psutil verwendet|:
 
 \begin{lstlisting}[language=python]
-print("CPU Usage: " + str(psutil.cpu_percent()))
-print("General RAM Usage: " + str(psutil.virtual_memory()))  # physical memory usage
+print(''CPU Usage: '' + str(psutil.cpu_percent()))
+print(''General RAM Usage: '' + str(psutil.virtual_memory()))  # physical memory usage
 pid = os.getpid()
 py = psutil.Process(pid)
 memoryUse = py.memory_info()[0] / 2. ** 30  # memory use in GB
@@ -189,12 +189,19 @@ In den meisten Fällen wird geachtet auf:
 	\item Übertragungsrate
 \end{itemize}
 
-\subsubsection{Warum stellt die "Hochverfügbarkeit" von IT Systemen in der heutigen Zeit eine sehr wichtige Eigenschaft dar?}
+\subsubsection{Warum stellt die Hochverfügbarkeit von IT Systemen in der heutigen Zeit eine sehr wichtige Eigenschaft dar?}
 In einer Zeit wo Steuererklärungen und Banküberweisungen über das Internet ablaufen, müssen Webapplikationen immer zuverlässig verfügbar sein. Zusätzlich durch das immer mehr populär werdende Online-Shopping werden sehr viele User-Anfragen an die Server gestellt, welche alle \textbf{zuverlässig} und \textbf{schnell} bearbeiten werden müssen.
-\subsubsection{Welche anderen Massnahmen neben einer Lastverteilung müssen getroffen werden, um die "Hochverfügbarkeit" sicher zu stellen?}
+\subsubsection{Welche anderen Massnahmen neben einer Lastverteilung müssen getroffen werden, um die ''Hochverfügbarkeit'' sicher zu stellen?}
 Natürlich müssen genug Server zur Verfügung stehen, der beste Lastverteilungssystem ist unbrauchbar wenn es nichts gibt auf was die Last verteilt werden kann. Es muss auch die interne und die Verbindung mit dem Internet gewährleistet sondern, Kommunikation ist das wichtigste!
-\subsubsection{Was versteht man unter "Session Persistenz" und welche Schwierigkeiten ergeben sich damit?}
+\subsubsection{Was versteht man unter Session Persistenz und welche Schwierigkeiten ergeben sich damit?}
+Eine Lastverteilungsmethode bei welcher der Load Balancer die gesamte session information während der Applikationstransaktion speichern muss. Falls die Sitzung abbricht aus unerwarteten Gründen, kann es zu fatalen Datenverlusten kommen.
 \subsubsection{Nennen Sie jeweils ein Beispiel, wo Session Persistenz notwendig bzw. nicht notwendig ist.}
-\subsubsection{Welcher Unterschied besteht zwischen einer "server-side" bzw "client-side" Lastverteilungslösung?}
-\subsubsection{Was versteht man unter dem "Mega-Proxy-Problem"?}
+Notwendig ist es bei Webanwendungen welche eine Sitzung aufbauen müssen. Es ist zum Beispiel auf \textbf{Amazon.de} nötig, ab dem Moment wo ein Artikel zum Warenkorb hinzugefügt oder man sich einloggt.
 
+Nicht benötigt wird es bei Seiten welche lediglich eine Aufgabe erledigen und keine Sitzung aufbauen müssen, beispielsweise ein RGB-to-HEX Converter.
+\subsubsection{Welcher Unterschied besteht zwischen einer ''server-side'' bzw ''client-side''\\ Lastverteilungslösung?}
+Beim Client-seitigen Load Balancer ist lokal ein Register vorhanden, in welchem alle Services mit den jeweiligen Informationen bereitstehen. Bei einer Anfrage wird der URL des passenden Services abefragt.
+
+Beim Server-seitigen Load Balancer ist eine zentrale Komponente vorhanden, welche alle Clients/Tasks zu den passenden Server/Abarbeitungskomponente verweist. 
+\subsubsection{Was versteht man unter dem ''Mega-Proxy-Problem''?}
+Die Mega Proxy Session, auch bekannt als Mega Proxy Problem, beschreibt jene Situation in welcher die IP des Users nicht korrekt herausgefunden werden kann. Dieses Problem tritt auf wenn die User hinter einem sogenannte Proxy-Server stehen, welcher die IP-Adresse des Users zu der des Proxy-Servers ändert. Grund für die Verwendung eines Proxy-Server ist der Wunsch von Anonymität bzw. Netz-Sicherheit.

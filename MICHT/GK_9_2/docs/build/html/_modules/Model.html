@@ -17,16 +17,15 @@
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="GK_9_2 1.0 documentation" href="../modules.html" />
-    <link rel="up" title="Module code" href="index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -50,15 +49,25 @@
             
   <h1>Source code for Model</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="Model"><a class="viewcode-back" href="../Model.html#Model.Model">[docs]</a><span></span><span class="k">class</span> <span class="nc">Model</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The model holds all the relevant data. Since there are no static classes in python, the methods have to annotated</span>
+<span class="sd">    with the @staticmethod annotation in order to access the functions without an instance.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">worker_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">logging</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.get_worker"><a class="viewcode-back" href="../Model.html#Model.Model.get_worker">[docs]</a>    <span class="k">def</span> <span class="nf">get_worker</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the list of Worker threads</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Model</span><span class="o">.</span><span class="n">worker_list</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.get_last_id"><a class="viewcode-back" href="../Model.html#Model.Model.get_last_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_last_id</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the id of the last worker added to the list as an int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">worker_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">0</span>
         <span class="k">else</span><span class="p">:</span>
@@ -66,22 +75,41 @@
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.add_worker"><a class="viewcode-back" href="../Model.html#Model.Model.add_worker">[docs]</a>    <span class="k">def</span> <span class="nf">add_worker</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param w: the worker to be added to the worker list</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">Model</span><span class="o">.</span><span class="n">worker_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.delete_worker"><a class="viewcode-back" href="../Model.html#Model.Model.delete_worker">[docs]</a>    <span class="k">def</span> <span class="nf">delete_worker</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :param w: the worker to be deleted from the worker list</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">Model</span><span class="o">.</span><span class="n">worker_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">w</span><span class="p">)</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.enable_logging"><a class="viewcode-back" href="../Model.html#Model.Model.enable_logging">[docs]</a>    <span class="k">def</span> <span class="nf">enable_logging</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sets the logging member to True</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">Model</span><span class="o">.</span><span class="n">logging</span> <span class="o">=</span> <span class="kc">True</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.disable_logging"><a class="viewcode-back" href="../Model.html#Model.Model.disable_logging">[docs]</a>    <span class="k">def</span> <span class="nf">disable_logging</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sets the logging member to False</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">Model</span><span class="o">.</span><span class="n">logging</span> <span class="o">=</span> <span class="kc">False</span></div>
 
     <span class="nd">@staticmethod</span>
 <div class="viewcode-block" id="Model.is_logging"><a class="viewcode-back" href="../Model.html#Model.Model.is_logging">[docs]</a>    <span class="k">def</span> <span class="nf">is_logging</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the logging member whether it&#39;s True or False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Model</span><span class="o">.</span><span class="n">logging</span></div></div>
 </pre></div>
 
@@ -119,7 +147,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Martin Woelfer.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>
