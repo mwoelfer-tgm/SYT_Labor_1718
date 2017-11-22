@@ -16,14 +16,12 @@ package test.java.com.hellokoding.auth.test;
 */
 
 import main.java.com.hellokoding.auth.repository.UserRepository;
+import main.java.com.hellokoding.auth.service.UserService;
 import main.java.com.hellokoding.auth.*;
-import main.java.com.hellokoding.auth.repository.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
@@ -32,7 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import main.java.com.hellokoding.auth.model.User;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {WebApplication.class, UserRepository.class})
+@SpringBootTest(classes = {WebApplication.class, UserRepository.class,  UserService.class})
 // Enable JMX so we can test the MBeans (you can't do this in a properties file)
 @TestPropertySource(properties = { "spring.jmx.enabled:true",
 		"spring.datasource.jmx-enabled:true" })
@@ -43,24 +41,26 @@ public class UserTest {
     @Autowired
     private UserRepository userRepository;
     
+    
     @Autowired
-    private TestEntityManager entityManager;
+    private UserService userService;
  
     // write test cases here
     
     @Test
-    public void whenFindByName_thenReturnUser() {
+    public void saveAndFindUser() {
         // given
         User u = new User();
+        
         u.setUsername("mwoelfer01");
-        entityManager.persist(u);
-        entityManager.flush();
+        u.setPassword("12345678");
+        
+        userService.save(u);
      
         // when
         User found = userRepository.findByUsername(u.getUsername());
      
         // then
-        System.out.println(found.getUsername());
         assertThat(found.getUsername())
           .isEqualTo(u.getUsername());
     }
