@@ -1,0 +1,204 @@
+%!TEX root=../document.tex
+
+\section{Ergebnisse}
+Da der erste Versuch nicht funktionierte, wurde auf eine Realisierung in JavaEE gesetzt mit Unterstützung von \verb|Spring Boot|, \verb|Spring Security|, \verb|Spring Data JPA| und der Datenbank \verb|HSQL|. Es wurde mit folgendem Tutorial gearbeitet:
+
+\href{https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/}{https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/}
+
+Das Endergebnis ist ein RESTful Webservice bei welchem man sich einloggen und registrieren kann und mit einer Willkommensnachricht begrüßt wird. 
+
+\subsection{Allgemein}
+Zuerst mussten gewisse Themengebieten recherchiert werden. Vor allem das Themengebiet \verb|Hibernate| musste von Grund auf gelernt und verstanden werden. Folgend werden einige Themen erklärt beziehungsweise Begriffe definiert. 
+
+\subsubsection{Hibernate}
+
+src: \href{https://howtoprogramwithjava.com/hibernate-persistence-beginners/}{https://howtoprogramwithjava.com/hibernate-persistence-beginners/}
+
+
+Hibernate ''steht'' zwischen objektorientiertem Java und einem \textbf{R}elational \textbf{D}ata\textbf{B}ase \textbf{M}anagement \textbf{S}ystem.
+
+Grundsätzlich dient Hibernate dazu, Java Objekte zu \textit{persistieren}, also diese ''permanent'' erhältlich zu machen.
+
+\subsubsection{Spring} 
+
+src: \href{https://howtoprogramwithjava.com/podcast-episode-33-intro-to-spring-framework/}{https://howtoprogramwithjava.com/podcast-episode-33-intro-to-spring-framework/}
+
+
+Hibernate wird sehr oft in Verindung mit \verb|Spring| verwendet, Spring kümmert sich um die Kernfunktion einer Rest-Applikation, und zwar dem \verb|Controller|. Mit Spring können auf bestimmte Links oder Link-patterns Funktionen ge\verb|mapped| werden, welche wiederum beispielsweise eine \verb|.jsp| page aufrufen. 
+
+\subsubsection{Beans}
+Zwar ist dieses Thema Grundwissen von JavaEE, trotzdem hatte ich große Probleme Erklärungen zu verstehen, da ich nicht wusste im Kontext von Java was eine \verb|Bean| ist. 
+
+Eine Bean ist lediglich ein Standard, welcher 3 folgende Eigenschaften vorschreibt:
+
+\begin{enumerate}
+	\item Alle Attribute sind private (nur Getter/Setter)
+	\item Ein public Konstruktor ohne Parameter
+	\item Muss \verb|Serializable| implementieren
+\end{enumerate}
+	
+Serializable: Beschreibt die Eigenschaft dass das Objekt in ein String umgewandelt werden kann
+
+\subsubsection{In-Memory-Datenbank}
+
+src: {https://de.wikipedia.org/wiki/In-Memory-Datenbank}{https://de.wikipedia.org/wiki/In-Memory-Datenbank}
+Da in dem Beispiel mit \verb|HSQL| gearbeitet, einer In-Memory-Datenbank, muss verstanden werden wie diese funktioniert, bzw. was die wichtigen Eigenschaften.
+
+Der wichtigste Unterschied ist, dass nicht wie bei einem herkömmlichen DBMS die Datenbanken auf der Festplatte gespeichert werden, sondern im RAM. Dies führt dazu, dass wenn der Server neu gestartet wird, also die Datenbank auch neu geladen wird, alle persistierten Daten verloren gehen.
+
+
+\subsubsection{@Autowired Annotation}
+Dies war die größte Verwirrung welche aufgetreten ist. Diese Annotation kommt sehr oft vor in dem Beispielprojekt, und zwar meistens vor einem Attribut:
+
+\begin{lstlisting}[language=Java]
+	@Autowired
+	private UserDetailsService userDetailsService;
+	
+\end{lstlisting}
+
+\subsection{Dependencies definieren}
+Die dependencies, d.h. welche Framework verwendet wird. Normalerweise würde das bedeuten die jeweiligen \verb|.jar| Files herunterzuladen und dem Build-Path hinzuzufügen, aber dank Maven kann man dies ganz einfach im \verb|pom.xml| File definieren:
+
+\begin{lstlisting}[language=xml]
+<dependencies>
+
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+<dependency>
+<groupId>org.hsqldb</groupId>
+<artifactId>hsqldb</artifactId>
+<scope>runtime</scope>
+</dependency>
+
+
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-tomcat</artifactId>
+<scope>provided</scope>
+</dependency>
+
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-test</artifactId>
+<scope>test</scope>
+</dependency>
+
+<dependency>
+<groupId>org.apache.tomcat.embed</groupId>
+<artifactId>tomcat-embed-jasper</artifactId>
+<scope>provided</scope>
+</dependency>
+
+<dependency>
+<groupId>javax.servlet</groupId>
+<artifactId>jstl</artifactId>
+</dependency>
+
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+</dependency>
+
+</dependencies>
+\end{lstlisting}
+
+Zusätzlich wird noch das \verb|springframework| plugin defniert:
+
+\begin{lstlisting}[language=xml]
+<build>
+<plugins>
+<plugin>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-maven-plugin</artifactId>
+</plugin>
+</plugins>
+</build>
+\end{lstlisting}
+
+\subsection{Entities definieren}
+Mit \verb|hsql| wird eine table durch die annotation \verb|@Entitity| definiert. Es wird eine Klasse User erstellt, welche folgende Attribute besitzt:
+
+\begin{itemize}
+	\item Long id
+	\item String username
+	\item String password
+	\item String passwordConfirm
+	\item Set<Role> roles
+\end{itemize} 
+
+Danach werden Getter- und Settermethoden definiert. Zu beachten ist, dass id den eindeutigen Primary Key repräsentiert und somit bei \verb|getId()| die Annotations \verb|@Id| und \verb|@GenerateValue(strategy = Generationtype.AUTO)| benötigt werden.
+
+\begin{lstlisting}[language=java]
+package com.hellokoding.auth.model;
+
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "user")
+public class User {
+private Long id;
+private String username;
+private String password;
+private String passwordConfirm;
+private Set<Role> roles;
+
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+public Long getId() {
+return id;
+}
+
+public void setId(Long id) {
+this.id = id;
+}
+
+public String getUsername() {
+return username;
+}
+
+public void setUsername(String username) {
+this.username = username;
+}
+
+public String getPassword() {
+return password;
+}
+
+public void setPassword(String password) {
+this.password = password;
+}
+
+@Transient
+public String getPasswordConfirm() {
+return passwordConfirm;
+}
+
+public void setPasswordConfirm(String passwordConfirm) {
+this.passwordConfirm = passwordConfirm;
+}
+
+@ManyToMany
+@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+public Set<Role> getRoles() {
+return roles;
+}
+
+public void setRoles(Set<Role> roles) {
+this.roles = roles;
+}
+}
+\end{lstlisting}
