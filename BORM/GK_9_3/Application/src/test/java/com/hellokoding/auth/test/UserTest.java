@@ -64,5 +64,4 @@ public class UserTest {
         assertThat(found.getUsername())
           .isEqualTo(u.getUsername());
     }
-    
 }
