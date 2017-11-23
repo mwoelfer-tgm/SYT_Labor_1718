@@ -1,4 +1,4 @@
-package main.java.com.hellokoding.auth.web;
+ package main.java.com.hellokoding.auth.web;
 
 import main.java.com.hellokoding.auth.model.User;
 import main.java.com.hellokoding.auth.service.SecurityService;

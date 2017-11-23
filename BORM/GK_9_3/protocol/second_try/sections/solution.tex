@@ -307,7 +307,8 @@ Bei \textbf{/login} wird zuerst überprüft, ob Fehler vorliegen, falls nicht wi
 	
 Zum Schluss wird noch definiert was bei \textbf{/welcome} passiert, wo einfach nur auf die \verb|welcome.jsp| Seite weitergeleitet wird, welche sich um das Rendering der Daten kümmert.
 
-\subsubsection{Tests}
+\subsection{Tests}
+\subsubsection{Unittests}
 Die Testklasse UserTest ermöglicht Unit-Tests laufen zu lassen. Beispielsweise gibt es folgenden Test:
 
 \begin{lstlisting}[language=Java]
@@ -337,5 +338,56 @@ Wenn man den Test mit \verb|mvn test| ausführt, erhält man folgendes Ergebnis:
 \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[width=0.6\linewidth]{images/tests}
-	\figcaption{Test wurde erfolgreich ausgeführt}
+	\figcaption{Unittest wurde erfolgreich ausgeführt}
+\end{minipage}
+
+\subsubsection{Regressiontests}
+Die Regressionstests wurden mit \verb|Postman| durchgeführt. Mit Postname können \textbf{POST} und \textbf{GET} requests gesendet und getesten werden.
+
+Das erste Problem auf welches gestoßen wurde war, dass kein \verb|CRSF-Token| vorhanden war beim Versuch ein Post-Request zu senden. Grund ist, das dieser token nur mitgesendet wird, wenn die Seite mit dem Browser aufgerufen wird. Um dieses Problem zu umgehen, wird CRSF in der \verb|WebSecurityConfig| disabled:
+
+\begin{lstlisting}[language=Java]
+	.and()
+	.csrf().disable();
+\end{lstlisting}
+
+Nun konnte eine leere request gesendet werden ohne Fehlermeldungen.
+
+Es wurde eine POST-request erstellt, auf der url \verb|localhost:8080/registration|, welches ein Form mit \textbf{username}, \textbf{password} und \textbf{passwordConfirm} mitsendet, um einen User zu erstellen.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.6\linewidth]{images/test2}
+	\figcaption{Es wird ein Form mitgesendet mit Daten}
+\end{minipage}
+
+Es können anschließend Tests geschrieben werden, in dem Fall wird überprüft ob auf die welcome Page umgeleitet wurde:
+
+\begin{lstlisting}[language=Java]
+pm.test("Status code is 200", function () {
+	pm.response.to.have.status(200);
+});
+
+pm.test("Body matches string", function () {
+	pm.expect(pm.response.text()).to.include("Welcome mwoelfer");
+});
+
+\end{lstlisting}
+
+Und bei der Ausführung sollten die Tests funktionieren:
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.6\linewidth]{images/test3}
+	\figcaption{Registrations-Test wurde erfolgreich ausgeführt}
+\end{minipage}
+
+\clearpage
+
+Es wurde ein weiterer Test für login geschrieben, welcher test ob auf die welcome-page weitergeleitet wird wenn ein Form mit \textbf{user} und \textbf{password} mitgesendet wird:
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.6\linewidth]{images/test4}
+	\figcaption{Login mit user und password funktioniert}
 \end{minipage}
