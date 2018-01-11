@@ -146,3 +146,93 @@ Nun kann man den \verb|TightVNC Viewer| öffnen. Im Feld \verb|Remote Host| gibt
 \end{minipage}
 
 Es wird nun mit dem Viewer auf den verschlüsselten SSH-Tunnel zugegriffen welcher eine Verbindung zum Server hat!
+
+\subsection{ipsec}
+Zuerst wurde auf den beiden virtuellen Maschinen \verb|strongswan|
+
+\begin{lstlisting}[language=Java]
+sudo apt-get install strongswan
+\end{lstlisting}
+
+Zusätzlich wird auch \verb|haveged| installiert und der Dienst gestartet:
+
+\begin{lstlisting}[language=Java]
+sudo apt-get install haveged
+sudo systemctl enable haveged
+sudo systemctl start haveged
+\end{lstlisting}
+
+Der nächste Schritt ist es auf den beiden Maschinen den gleichen \textbf{PSK} (\textbf{P}re \textbf{S}hared \textbf{K}ey) zu definieren im \verb|/etc/ipsec.secrets| file:
+
+
+\begin{tabular}{p{8cm} p{8cm}}
+	left  &   right\\
+	\begin{lstlisting}
+	10.0.2.8 10.0.2.9 : PSK 'schueler'
+	\end{lstlisting}&
+	\begin{lstlisting}
+	10.0.2.9 10.0.2.8 : PSK 'schueler'
+	\end{lstlisting}
+\end{tabular} 
+
+
+
+
+Zum Schluss müssen noch die individuellen Config Files zu bearbeiten, diese liegen jeweils in \verb|/etc/ipsec.conf|:
+
+\begin{tabular}{p{8cm} p{8cm}}
+	left  &   right\\
+	\begin{lstlisting}
+	conn A_TO_B
+	authby=secret
+	left=10.0.2.8
+	leftsubnet=10.0.2.0/24
+	right=10.0.2.9
+	rightsubnet=10.0.2.0/24
+	ike=aes256-sha2_256-modp1024!
+	esp=aes256-sha2_256!
+	keyingtries=0
+	ikelifetime=1h
+	lifetime=8h
+	dpddelay=30
+	dpdtimeout=120
+	dpdaction=restart
+	auto=start
+	\end{lstlisting}&
+	\begin{lstlisting}
+	conn B_TO_A
+	authby=secret
+	left=10.0.2.9
+	leftsubnet=10.0.2.0/24
+	right=10.0.2.8
+	rightsubnet=10.0.2.0/24
+	ike=aes256-sha2_256-modp1024!
+	esp=aes256-sha2_256!
+	keyingtries=0
+	ikelifetime=1h
+	lifetime=8h
+	dpddelay=30
+	dpdtimeout=120
+	dpdaction=restart
+	auto=start
+	\end{lstlisting}
+\end{tabular} 
+
+Danach muss ipsec auf beiden Maschinen neu gestartet werden mit \verb|sudo ipsec restart| und danach kann schon der Tunnel getestet werden mit \verb|sudo ipsec up A_TO_B| auf Maschine A bzw. \verb|sudo ipsec up B_TO_A| auf Maschine B. Tatsächlich wird aber der Befehl nur auf einer Maschine ausgeführt da der Tunnel zwischen den beiden Geräten aufgebaut wird.
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/left}
+	\figcaption{Es wurde erfolgreich der Tunnel zwischen den beiden Geräten aufgebaut}
+\end{minipage}
+
+
+Um zu testen ob die Pakete mit \textbf{ESP} verschlüsselt werden, wird von einer Maschine auf die andere gepingt, während die andere \verb|sudo tcpdump esp| ausführt.
+
+Es sollten dauerhaft \textbf{responses} und \textbf{reqeuests} zu sehen sein, welche mit \textbf{ESP} verschlüsselt wurden. 
+
+\begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/tcpdump}
+	\figcaption{Pakete werden mit ESP verschlüsselt}
+\end{minipage}

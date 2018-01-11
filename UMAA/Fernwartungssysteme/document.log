@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.13)  19 OCT 2017 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.13)  23 NOV 2017 16:04
 entering extended mode
 **./document.tex
 (document.tex
@@ -1006,7 +1006,7 @@ LaTeX Info: Redefining \nameref on input line 48.
 \openout4 = `document.out'.
 
  (special/title.tex
-<images/jdIT_tgm.png, id=67, 748.7975pt x 640.3925pt>
+<images/jdIT_tgm.png, id=71, 748.7975pt x 640.3925pt>
 File: images/jdIT_tgm.png Graphic file (type png)
 
 <use images/jdIT_tgm.png>
@@ -1114,7 +1114,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 8.
 
-<images/generate_key.png, id=130, 549.55313pt x 295.85532pt>
+<images/generate_key.png, id=136, 549.55313pt x 295.85532pt>
 File: images/generate_key.png Graphic file (type png)
 
 <use images/generate_key.png>
@@ -1130,7 +1130,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 21.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 21.
-<images/transfer_key.png, id=131, 553.31718pt x 167.87718pt>
+<images/transfer_key.png, id=137, 553.31718pt x 167.87718pt>
 File: images/transfer_key.png Graphic file (type png)
 
 <use images/transfer_key.png>
@@ -1158,7 +1158,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 35.
 
-<images/access_server.png, id=139, 550.30594pt x 179.16937pt>
+<images/access_server.png, id=145, 550.30594pt x 179.16937pt>
 File: images/access_server.png Graphic file (type png)
 
 <use images/access_server.png>
@@ -1188,7 +1188,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 50.
 
-<images/vncserver.png, id=148, 385.44pt x 149.8097pt>
+<images/vncserver.png, id=154, 385.44pt x 149.8097pt>
 File: images/vncserver.png Graphic file (type png)
 
 <use images/vncserver.png>
@@ -1200,7 +1200,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 60.
 See the caption package documentation for explanation.
 
-<images/kill_service.png, id=149, 260.47313pt x 28.60687pt>
+<images/kill_service.png, id=155, 260.47313pt x 28.60687pt>
 File: images/kill_service.png Graphic file (type png)
 
 <use images/kill_service.png>
@@ -1232,7 +1232,7 @@ Package babel Info: Redefining ngerman shorthand "~
  [4
 
  <./images/vncserver.png> <./images/kill_service.png>]
-<images/start_service.png, id=164, 426.09187pt x 87.32625pt>
+<images/start_service.png, id=170, 426.09187pt x 87.32625pt>
 File: images/start_service.png Graphic file (type png)
 
 <use images/start_service.png>
@@ -1252,7 +1252,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 103.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 103.
-<images/user_ip.png, id=165, 220.57407pt x 100.12407pt>
+<images/user_ip.png, id=171, 220.57407pt x 100.12407pt>
 File: images/user_ip.png Graphic file (type png)
 
 <use images/user_ip.png>
@@ -1264,7 +1264,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 111.
 See the caption package documentation for explanation.
 
-<images/ports.png, id=166, 216.81pt x 141.52875pt>
+<images/ports.png, id=172, 216.81pt x 141.52875pt>
 File: images/ports.png Graphic file (type png)
  <use images/ports.png>
 Package pdftex.def Info: images/ports.png used on input line 120.
@@ -1284,7 +1284,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 124.
 [5 <./images/start_service.png> <./images/user_ip.png>]
-<images/console.png, id=177, 496.85625pt x 182.93344pt>
+<images/console.png, id=183, 496.85625pt x 182.93344pt>
 File: images/console.png Graphic file (type png)
 
 <use images/console.png>
@@ -1303,7 +1303,7 @@ m/n/12 zu se-hen, wenn man die-sen öff-net (Rechtsklick auf Statusleiste$\OMS/c
 msy/m/n/12 !$\T1/cmr/m/n/12 Event
  []
 
-<images/event_log.png, id=178, 256.70906pt x 30.1125pt>
+<images/event_log.png, id=184, 256.70906pt x 30.1125pt>
 File: images/event_log.png Graphic file (type png)
 
 <use images/event_log.png>
@@ -1315,7 +1315,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 137.
 See the caption package documentation for explanation.
 
-<images/gui.png, id=179, 773.13844pt x 623.32875pt>
+<images/gui.png, id=185, 773.13844pt x 623.32875pt>
 File: images/gui.png Graphic file (type png)
  <use images/gui.png>
 Package pdftex.def Info: images/gui.png used on input line 144.
@@ -1334,17 +1334,63 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 148.
-[6 <./images/ports.png> <./images/console.png> <./images/event_log.png>])
+[6 <./images/ports.png> <./images/console.png> <./images/event_log.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 150.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 150.
 
-[7 <./images/gui.png>] (document.lof)
+("F:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 154.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 183.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 183.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 183.
+ [7 <./images/gui.png>] <images/left.png, id=213, 547.2947pt x 115.93312pt>
+File: images/left.png Graphic file (type png)
+
+<use images/left.png>
+Package pdftex.def Info: images/left.png used on input line 225.
+(pdftex.def)             Requested size: 400.38872pt x 84.81444pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 226.
+See the caption package documentation for explanation.
+
+<images/tcpdump.png, id=214, 545.78906pt x 27.85406pt>
+File: images/tcpdump.png Graphic file (type png)
+
+<use images/tcpdump.png>
+Package pdftex.def Info: images/tcpdump.png used on input line 236.
+(pdftex.def)             Requested size: 400.38872pt x 20.43358pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 237.
+See the caption package documentation for explanation.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 234--67
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+[8 <./images/left.png> <./images/tcpdump.png>] (document.lof)
 \tf@lof=\write6
 \openout6 = `document.lof'.
 
@@ -1357,7 +1403,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 72.
- [8
+ [9
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
@@ -1365,15 +1411,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: D0BE2A0C005F86E6A7FFB3C29F42466B;1390.
+(rerunfilecheck)             Checksum: 084F3111A11E1618D47589A9952D6BE0;1446.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 12266 strings out of 493334
- 176714 string characters out of 3136672
- 297813 words of memory out of 3000000
- 15497 multiletter control sequences out of 15000+200000
- 14629 words of font info for 38 fonts, out of 3000000 for 9000
+ 12408 strings out of 493334
+ 178592 string characters out of 3136672
+ 332813 words of memory out of 3000000
+ 15589 multiletter control sequences out of 15000+200000
+ 14843 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,12n,99p,434b,1263s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Bernd\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -1388,10 +1434,11 @@ ers\Bernd\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.
 pk> <C:\Users\Bernd\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ecbx2488.pk><F:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ccicons/ccic
 ons.pfb><F:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb>
-Output written on document.pdf (10 pages, 622254 bytes).
+0.pfb><F:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.p
+fb>
+Output written on document.pdf (11 pages, 702980 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 189 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 692 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

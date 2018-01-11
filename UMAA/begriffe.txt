@@ -1,0 +1,16 @@
+SA (Security Associations):
+    Sicherheitsvereinbarung zwischen 2 Instanzen mittel IPsec
+    Jeweils verschiedene Vereinbarungen für AH und ESP
+AH (Authentication Headers):
+    Sorgt für die Datenintegrität zwischen den Ipv6 Protokollen und Ipsec mittels Prüfsumme.
+    Damit lässt sich festellen ob die Nachricht auch vom tatsächlich erwartetem User stammt.
+ISAKMP (Internet Security Association and Key Management Protocol):
+    Dient der Verwaltung und Aktualisierung von den Keys
+IKE (Internet Key Exchange):
+    Beschreibt ein Zweiphasiges Szenario. 
+    Zuerst wird eine Phase begonnen, mit vergleichsweisen Schwachen Sicherheitsmaßnahmen wo lediglich die Security Assocations in einfachster Form aufgebaut werden.
+    In der zweiten Phase werden nun für die jeweiligen Sicherheitsprotokolle die SA's aufgebaut.
+ESP (Encapsulating Security Payload):
+    Sorgt für die Authentisierung, Integrität und Vertraulichkeit der IP-Pakete.
+    Steht mit AH in "Konkurrenz", ist aber sicherer da die Übetragung der Pakete verschlüsselt wird.
+    Es gibt 2 Modi, Tunnel und Transport

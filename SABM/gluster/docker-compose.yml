@@ -1,0 +1,13 @@
+version: '2'
+services:
+    gs1:
+        image: gluster/gluster-centos
+        privileged: true
+        volumes:
+        - ./volumes/server1:/data
+
+    gs2:
+        image: gluster/gluster-centos
+        privileged: true
+        volumes:
+        - ./volumes/server2:/data
