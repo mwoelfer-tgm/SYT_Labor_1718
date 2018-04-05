@@ -1,0 +1,614 @@
+Archive member included to satisfy reference by file (symbol)
+
+F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+                              src/stm32f3xx_it.o (HAL_IncTick)
+F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+                              F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o) (HAL_NVIC_SetPriorityGrouping)
+F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+                              F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o) (HAL_RCC_GetHCLKFreq)
+F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+                              F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o) (HAL_GPIO_Init)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+                              src/syscalls.o (__errno)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o (exit)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o) (_global_impure_ptr)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o (__libc_init_array)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o (memset)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o) (__call_exitprocs)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o) (atexit)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                              f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o) (__register_exitproc)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+ .data          0x00000000        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+ .text          0x00000000       0x74 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .ARM.extab     0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .ARM.attributes
+                0x00000000       0x1c f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+ .text          0x00000000        0x0 src/main.o
+ .data          0x00000000        0x0 src/main.o
+ .bss           0x00000000        0x0 src/main.o
+ .text          0x00000000        0x0 src/stm32f3xx_it.o
+ .data          0x00000000        0x0 src/stm32f3xx_it.o
+ .bss           0x00000000        0x0 src/stm32f3xx_it.o
+ .text          0x00000000        0x0 src/syscalls.o
+ .data          0x00000000        0x4 src/syscalls.o
+ .bss           0x00000000        0x8 src/syscalls.o
+ .text.initialise_monitor_handles
+                0x00000000        0x4 src/syscalls.o
+ .text._getpid  0x00000000        0x4 src/syscalls.o
+ .text._kill    0x00000000       0x10 src/syscalls.o
+ .text._exit    0x00000000        0xc src/syscalls.o
+ .text._read    0x00000000       0x1c src/syscalls.o
+ .text._write   0x00000000       0x1c src/syscalls.o
+ .text._sbrk    0x00000000       0x34 src/syscalls.o
+ .text._close   0x00000000        0x8 src/syscalls.o
+ .text._fstat   0x00000000        0xc src/syscalls.o
+ .text._isatty  0x00000000        0x4 src/syscalls.o
+ .text._lseek   0x00000000        0x4 src/syscalls.o
+ .text._open    0x00000000        0xc src/syscalls.o
+ .text._wait    0x00000000       0x10 src/syscalls.o
+ .text._unlink  0x00000000       0x10 src/syscalls.o
+ .text._times   0x00000000        0x8 src/syscalls.o
+ .text._stat    0x00000000        0xc src/syscalls.o
+ .text._link    0x00000000       0x10 src/syscalls.o
+ .text._fork    0x00000000       0x10 src/syscalls.o
+ .text._execve  0x00000000       0x10 src/syscalls.o
+ .comment       0x00000000       0x6f src/syscalls.o
+ .ARM.attributes
+                0x00000000       0x33 src/syscalls.o
+ .text          0x00000000        0x0 src/system_stm32f3xx.o
+ .data          0x00000000        0x4 src/system_stm32f3xx.o
+ .bss           0x00000000        0x0 src/system_stm32f3xx.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0x60 src/system_stm32f3xx.o
+ .rodata        0x00000000       0x10 src/system_stm32f3xx.o
+ .text          0x00000000       0x14 startup/startup_stm32f303xc.o
+ .data          0x00000000        0x0 startup/startup_stm32f303xc.o
+ .bss           0x00000000        0x0 startup/startup_stm32f303xc.o
+ .text          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .data          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_MspInit
+                0x00000000        0x4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_MspDeInit
+                0x00000000        0x4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DeInit
+                0x00000000       0x24 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_InitTick
+                0x00000000       0x28 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_Init
+                0x00000000       0x24 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_GetTick
+                0x00000000        0xc F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_Delay
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_SuspendTick
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_ResumeTick
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_GetHalVersion
+                0x00000000        0x8 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_GetREVID
+                0x00000000        0xc F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_GetDEVID
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DBGMCU_EnableDBGSleepMode
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DBGMCU_DisableDBGSleepMode
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DBGMCU_EnableDBGStopMode
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DBGMCU_DisableDBGStopMode
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DBGMCU_EnableDBGStandbyMode
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text.HAL_DBGMCU_DisableDBGStandbyMode
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .text          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .data          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .bss           0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_SetPriorityGrouping
+                0x00000000       0x24 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_SetPriority
+                0x00000000       0x70 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_EnableIRQ
+                0x00000000       0x18 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_DisableIRQ
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_SystemReset
+                0x00000000       0x24 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_SYSTICK_Config
+                0x00000000       0x30 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_MPU_ConfigRegion
+                0x00000000       0x54 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_GetPriorityGrouping
+                0x00000000       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_GetPriority
+                0x00000000       0x60 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_SetPendingIRQ
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_GetPendingIRQ
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_ClearPendingIRQ
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_NVIC_GetActive
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text.HAL_SYSTICK_CLKSourceConfig
+                0x00000000       0x18 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .text          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .data          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .bss           0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_DeInit
+                0x00000000       0x3c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_OscConfig
+                0x00000000      0x5ec F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_ClockConfig
+                0x00000000      0x1e4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_MCOConfig
+                0x00000000       0x50 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_EnableCSS
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_DisableCSS
+                0x00000000       0x1c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_GetSysClockFreq
+                0x00000000       0x68 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_GetHCLKFreq
+                0x00000000       0x90 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_GetPCLK1Freq
+                0x00000000       0xac F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_GetPCLK2Freq
+                0x00000000       0xac F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_GetOscConfig
+                0x00000000       0x90 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_GetClockConfig
+                0x00000000       0x40 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_CSSCallback
+                0x00000000        0x4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text.HAL_RCC_NMI_IRQHandler
+                0x00000000       0x20 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .rodata        0x00000000       0x30 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .comment       0x00000000       0x6f F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .ARM.attributes
+                0x00000000       0x33 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_rcc.o)
+ .text          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .data          0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .bss           0x00000000        0x0 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_Init
+                0x00000000      0x1dc F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_DeInit
+                0x00000000      0x130 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_ReadPin
+                0x00000000        0xc F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_WritePin
+                0x00000000        0xc F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_TogglePin
+                0x00000000        0x8 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_LockPin
+                0x00000000       0x2c F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_EXTI_Callback
+                0x00000000        0x4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text.HAL_GPIO_EXTI_IRQHandler
+                0x00000000       0x18 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .comment       0x00000000       0x6f F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .ARM.attributes
+                0x00000000       0x33 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_gpio.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+ .text.__errno  0x00000000        0xc f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+ .debug_frame   0x00000000       0x20 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000000       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-errno.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x20 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .text.memset   0x00000000       0x9c f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x34 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000       0xd8 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+ .eh_frame      0x00000000        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+ .jcr           0x00000000        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+ .text          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+ .data          0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+ .bss           0x00000000        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00040000         xr
+RAM              0x20000000         0x0000a000         xrw
+CCMRAM           0x10000000         0x00002000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m/crt0.o
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libm.a
+LOAD src/main.o
+LOAD src/stm32f3xx_it.o
+LOAD src/syscalls.o
+LOAD src/system_stm32f3xx.o
+LOAD startup/startup_stm32f303xc.o
+LOAD F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a
+START GROUP
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m\libgcc.a
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a
+END GROUP
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+LOAD f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+                0x2000a000                _estack = 0x2000a000
+                0x00000200                _Min_Heap_Size = 0x200
+                0x00000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000      0x188
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x188 startup/startup_stm32f303xc.o
+                0x08000000                g_pfnVectors
+                0x08000188                . = ALIGN (0x4)
+
+.text           0x08000188      0x2dc
+                0x08000188                . = ALIGN (0x4)
+ *(.text)
+ .text          0x08000188       0xa4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+ *(.text*)
+ .text.startup.main
+                0x0800022c        0x4 src/main.o
+                0x0800022c                main
+ .text.SysTick_Handler
+                0x08000230       0x10 src/stm32f3xx_it.o
+                0x08000230                SysTick_Handler
+ .text.SystemInit
+                0x08000240       0x60 src/system_stm32f3xx.o
+                0x08000240                SystemInit
+ .text.Reset_Handler
+                0x080002a0       0x50 startup/startup_stm32f303xc.o
+                0x080002a0                Reset_Handler
+ .text.Default_Handler
+                0x080002f0        0x2 startup/startup_stm32f303xc.o
+                0x080002f0                RTC_Alarm_IRQHandler
+                0x080002f0                TIM8_TRG_COM_IRQHandler
+                0x080002f0                TIM8_CC_IRQHandler
+                0x080002f0                DebugMon_Handler
+                0x080002f0                TIM1_CC_IRQHandler
+                0x080002f0                HardFault_Handler
+                0x080002f0                USB_HP_IRQHandler
+                0x080002f0                PVD_IRQHandler
+                0x080002f0                TAMP_STAMP_IRQHandler
+                0x080002f0                PendSV_Handler
+                0x080002f0                NMI_Handler
+                0x080002f0                EXTI3_IRQHandler
+                0x080002f0                USB_HP_CAN_TX_IRQHandler
+                0x080002f0                EXTI0_IRQHandler
+                0x080002f0                I2C2_EV_IRQHandler
+                0x080002f0                FPU_IRQHandler
+                0x080002f0                TIM1_UP_TIM16_IRQHandler
+                0x080002f0                UsageFault_Handler
+                0x080002f0                ADC1_2_IRQHandler
+                0x080002f0                SPI1_IRQHandler
+                0x080002f0                CAN_SCE_IRQHandler
+                0x080002f0                TIM6_DAC_IRQHandler
+                0x080002f0                TIM8_UP_IRQHandler
+                0x080002f0                DMA2_Channel2_IRQHandler
+                0x080002f0                DMA1_Channel4_IRQHandler
+                0x080002f0                USART3_IRQHandler
+                0x080002f0                DMA1_Channel7_IRQHandler
+                0x080002f0                UART5_IRQHandler
+                0x080002f0                ADC3_IRQHandler
+                0x080002f0                TIM4_IRQHandler
+                0x080002f0                CAN_RX1_IRQHandler
+                0x080002f0                DMA2_Channel1_IRQHandler
+                0x080002f0                I2C1_EV_IRQHandler
+                0x080002f0                DMA1_Channel6_IRQHandler
+                0x080002f0                UART4_IRQHandler
+                0x080002f0                DMA2_Channel4_IRQHandler
+                0x080002f0                TIM3_IRQHandler
+                0x080002f0                RCC_IRQHandler
+                0x080002f0                DMA1_Channel1_IRQHandler
+                0x080002f0                Default_Handler
+                0x080002f0                USBWakeUp_RMP_IRQHandler
+                0x080002f0                EXTI15_10_IRQHandler
+                0x080002f0                TIM7_IRQHandler
+                0x080002f0                EXTI9_5_IRQHandler
+                0x080002f0                RTC_WKUP_IRQHandler
+                0x080002f0                SPI2_IRQHandler
+                0x080002f0                USB_LP_CAN_RX0_IRQHandler
+                0x080002f0                MemManage_Handler
+                0x080002f0                SVC_Handler
+                0x080002f0                DMA2_Channel5_IRQHandler
+                0x080002f0                DMA1_Channel5_IRQHandler
+                0x080002f0                USB_LP_IRQHandler
+                0x080002f0                EXTI4_IRQHandler
+                0x080002f0                TIM1_TRG_COM_TIM17_IRQHandler
+                0x080002f0                DMA1_Channel3_IRQHandler
+                0x080002f0                ADC4_IRQHandler
+                0x080002f0                WWDG_IRQHandler
+                0x080002f0                TIM2_IRQHandler
+                0x080002f0                COMP7_IRQHandler
+                0x080002f0                COMP1_2_3_IRQHandler
+                0x080002f0                EXTI1_IRQHandler
+                0x080002f0                USART2_IRQHandler
+                0x080002f0                COMP4_5_6_IRQHandler
+                0x080002f0                I2C2_ER_IRQHandler
+                0x080002f0                DMA1_Channel2_IRQHandler
+                0x080002f0                TIM8_BRK_IRQHandler
+                0x080002f0                FLASH_IRQHandler
+                0x080002f0                BusFault_Handler
+                0x080002f0                USART1_IRQHandler
+                0x080002f0                SPI3_IRQHandler
+                0x080002f0                I2C1_ER_IRQHandler
+                0x080002f0                USBWakeUp_IRQHandler
+                0x080002f0                DMA2_Channel3_IRQHandler
+                0x080002f0                EXTI2_TSC_IRQHandler
+                0x080002f0                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x080002f2        0x2 
+ .text.HAL_IncTick
+                0x080002f4       0x10 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+                0x080002f4                HAL_IncTick
+ .text.HAL_SYSTICK_Callback
+                0x08000304        0x4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+                0x08000304                HAL_SYSTICK_Callback
+ .text.HAL_SYSTICK_IRQHandler
+                0x08000308        0x8 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+                0x08000308                HAL_SYSTICK_IRQHandler
+ .text.__libc_init_array
+                0x08000310       0x50 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+                0x08000310                __libc_init_array
+ .text.startup.register_fini
+                0x08000360       0x14 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08000374        0xc f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+                0x08000374                atexit
+ .text.__libc_fini_array
+                0x08000380       0x28 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+                0x08000380                __libc_fini_array
+ .text.__register_exitproc
+                0x080003a8       0xa4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+                0x080003a8                __register_exitproc
+ *(.glue_7)
+ .glue_7        0x0800044c        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0800044c        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x0800044c        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+ *(.init)
+ .init          0x0800044c        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+                0x0800044c                _init
+ .init          0x08000450        0x8 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+ *(.fini)
+ .fini          0x08000458        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+                0x08000458                _fini
+ .fini          0x0800045c        0x8 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+                0x08000464                . = ALIGN (0x4)
+                0x08000464                _etext = .
+
+.vfp11_veneer   0x08000464        0x0
+ .vfp11_veneer  0x08000464        0x0 linker stubs
+
+.v4_bx          0x08000464        0x0
+ .v4_bx         0x08000464        0x0 linker stubs
+
+.iplt           0x08000464        0x0
+ .iplt          0x08000464        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+
+.rodata         0x08000464        0x8
+                0x08000464                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.4
+                0x08000464        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                                  0x2 (size before relaxing)
+ .rodata._global_impure_ptr
+                0x08000468        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                0x08000468                _global_impure_ptr
+                0x0800046c                . = ALIGN (0x4)
+
+.rel.dyn        0x0800046c        0x0
+ .rel.iplt      0x0800046c        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x0800046c        0x0
+                0x0800046c                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0800046c                __exidx_end = .
+
+.preinit_array  0x0800046c        0x0
+                0x0800046c                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x0800046c                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0800046c        0x8
+                0x0800046c                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ .init_array.00000
+                0x0800046c        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x08000470        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+                0x08000474                PROVIDE (__init_array_end, .)
+
+.fini_array     0x08000474        0x4
+                0x08000474                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x08000474        0x4 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+                0x08000478                PROVIDE (__fini_array_end, .)
+                0x08000478                _sidata = LOADADDR (.data)
+
+.data           0x20000000      0x428 load address 0x08000478
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.impure_data
+                0x20000000      0x428 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+                0x20000428                . = ALIGN (0x4)
+                0x20000428                _edata = .
+                0x080008a0                _siccmram = LOADADDR (.ccmram)
+
+.jcr            0x20000428        0x0 load address 0x080008a0
+ .jcr           0x20000428        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+
+.tm_clone_table
+                0x20000428        0x0 load address 0x080008a0
+ .tm_clone_table
+                0x20000428        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+ .tm_clone_table
+                0x20000428        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+
+.igot.plt       0x20000428        0x0 load address 0x080008a0
+ .igot.plt      0x20000428        0x0 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+
+.ccmram         0x10000000        0x0 load address 0x080008a0
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _sccmram = .
+ *(.ccmram)
+ *(.ccmram*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _eccmram = .
+                0x10000000                . = ALIGN (0x4)
+
+.bss            0x20000428       0x20
+                0x20000428                _sbss = .
+                0x20000428                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x20000428       0x1c f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+ .bss           0x20000444        0x4 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ *(.bss*)
+ *(COMMON)
+                0x20000448                . = ALIGN (0x4)
+                0x20000448                _ebss = .
+                0x20000448                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x20000448      0x600
+                0x20000448                . = ALIGN (0x8)
+                0x20000448                PROVIDE (end, .)
+                [!provide]                PROVIDE (_end, .)
+                0x20000648                . = (. + _Min_Heap_Size)
+ *fill*         0x20000448      0x200 
+                0x20000a48                . = (. + _Min_Stack_Size)
+ *fill*         0x20000648      0x400 
+                0x20000a48                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x00000000       0x2a
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtbegin.o
+ .ARM.attributes
+                0x0000004c       0x33 src/main.o
+ .ARM.attributes
+                0x0000007f       0x33 src/stm32f3xx_it.o
+ .ARM.attributes
+                0x000000b2       0x33 src/system_stm32f3xx.o
+ .ARM.attributes
+                0x000000e5       0x21 startup/startup_stm32f303xc.o
+ .ARM.attributes
+                0x00000106       0x33 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .ARM.attributes
+                0x00000139       0x33 F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+ .ARM.attributes
+                0x0000016c       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000019a       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x000001c8       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x000001f6       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x00000224       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000252       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000280       0x2e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtend.o
+ .ARM.attributes
+                0x000002ae       0x1e f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/armv7e-m/crtn.o
+OUTPUT(redLight.elf elf32-littlearm)
+
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e src/main.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f src/stm32f3xx_it.o
+ .comment       0x0000006e       0x6f src/system_stm32f3xx.o
+ .comment       0x0000006e       0x6f F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal.o)
+ .comment       0x0000006e       0x6f F:\Users\Bernd\Onedrive\Schule\4. Jahrgang\SYT\workspace\stm32f3discovery_hal_lib\Release\libstm32f3discovery_hal_lib.a(stm32f3xx_hal_cortex.o)
+
+.debug_line     0x00000000       0x7f
+ .debug_line    0x00000000       0x7f startup/startup_stm32f303xc.o
+
+.debug_info     0x00000000       0x90
+ .debug_info    0x00000000       0x90 startup/startup_stm32f303xc.o
+
+.debug_abbrev   0x00000000       0x12
+ .debug_abbrev  0x00000000       0x12 startup/startup_stm32f303xc.o
+
+.debug_aranges  0x00000000       0x28
+ .debug_aranges
+                0x00000000       0x28 startup/startup_stm32f303xc.o
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 startup/startup_stm32f303xc.o
+
+.debug_frame    0x00000000      0x104
+ .debug_frame   0x00000000       0x2c f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-init.o)
+ .debug_frame   0x0000002c       0x50 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000007c       0x20 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000009c       0x34 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x000000d0       0x34 f:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.7.0.201602121829/tools/compiler/bin/../lib/gcc/arm-none-eabi/5.2.1/../../../../arm-none-eabi/lib/armv7e-m\libc.a(lib_a-__atexit.o)

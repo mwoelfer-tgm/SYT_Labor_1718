@@ -1,0 +1,84 @@
+%!TEX root=../document.tex
+
+\section{Aufgabenstellung}
+Die Aufgabe ist im Detail am Ende des Dokumentes "InterruptAdvanced.pdf" beschrieben. In diesem Dokument ist davor auch die technik der Interrupt-Priorisierung einigermaßen detailloiert beschrieben. 
+
+Führe die Aufgaben wie im Dokument beschrieben durch und schreibe ein zugehöriges Protokoll. GIb den Sourceode und das Protokoll ab.
+\subsection{Teil (a): Interrupts für Blinken und Toggeln}
+Erstelle ein einfaches Programm, wobei zwei LEDs blinken. Verwende hierbei für eine LED
+die Funktion HAL\_Delay im Hauptprogramm. Diese nutzt wiederum implizit den SystickInterrupt.
+Die zweite LED wird direkt über den Systick-Callback gesteuert. Eine weitere LED
+wird mit dem Taster getoggelt. Alles zusammen funktioniert einwandfrei. Beide InterruptRoutinen
+(Systick und EXTI0) werden schnell wieder verlassen, sodass es dabei zu keinen
+Problemen kommt.
+\subsection{Teil (b): Blinken innnerhalb einer Interruptroutine}
+Wenn der Taster des Boards gedrückt wird, so möge eine LED drei Mal blinken. Die
+Steuerung für das Blinken möge in der Interruptroutine des Tasters selbst erfolgen. Das
+Blinken soll mit HAL\_Delay gesteuert werden. Erst nach dem Blinken soll die InterruptRoutine
+verlassen werden.
+Die Priorität und des Taster-Interrupts muss man ordentlich konfigurieren. In HAL\_Init wird
+die Priorität des Systick-Interrupts auf niedrig (15) gesetzt. Man muss die Priorität von
+Systick auf hoch setzen (z.B.: 0) und die Priorität des Taster - Interrupts auf einen etwas
+niedrigeren Wert (z.B.: 1). Ändert man die Priorität nicht, so bleibt das Programm ewig in der
+Interrupt-Routine des Buttons hängen!
+\subsection{Teil (c): Eigenen Interrupt definieren und via Software auslösen}
+Trage deine eigene Interrupt-Routine (Name könnte sein <deinName>\_IRQHandler) in einer
+feien Stelle der Interrupttabelle ein. Definiere lokal die zugehörige Interrupt-Nummer
+(<deinName\_IRQn). Die Interrupt-Routine möge einfach nur ein LED toggeln. Aktiviere dein
+Interrupt in der Interrupttabelle. Löse nun den Interrupt in der Callback-Routine für den
+Taster aus. Wenn die Priorität des selbstdefinierten Interrupts höher ist als die des Tasters,
+so wird er sofort ausgeführt. Wenn die Priorität gleich oder niedriger ist, so wird der
+selbstdefinierte Interrupt erst ausgeführt, nachdem der Taster-Interrupt beendet ist.
+\subsection{Teil (d): Externen Schalter entprellen}
+Unter Tasterprellen versteht man folgendes: Ein Taster kann beim Drücken und Loslassen
+kurze Zeit vibrieren und dabei öfters die Tasterpins verbinden und wieder trennen. Bei einer
+Interruptsteuerung, welche auf rising und/oder falling edges reagiert, kann dies zu
+oftmaligen Interrupts und damit zu undefinierten Software-Zuständen führen. Ein Taster ist
+entprellt, wenn solche Vibrationen keine Auswirkungen auf die Funktionalität des
+Gesamtsystems haben.
+Wir entprellen einen externen Taster folgendermaßen: Wir warten im Interrupt wenige
+Millisekunden und prüfen dann den Zustand des zugehörigen Pins. Ist der Zustand auf 1,
+dann haben wir einen rising-edge Interrupt, ist der Zustand auf 0 so handelt es sich um
+einen falling-edge Interrupt. Wir ignorieren letzteren!
+Mit einem solchen entprellten externen Schalter toggeln wir eine LED.
+Wiederum muss die Priorität des Systick-Interrupts höher sein als die Priorität des Interrupts
+des externen Tasters.
+\subsection{Teil (e): 2 Schalter mit unterschiedlichen Prioritäten}
+Realisiere folgendes:
+\begin{itemize}
+	\item Ein Blinklicht in der main-Funktion mittels HAL\_Delay.
+	\item den Systick-Interrupt mit hoher Priorität
+	\item Bei Betätigen des Taster am Board soll ein zweites LED 5 Mal blinken, realisiert
+	mittels HAL\_Delay.
+	\item Einen externen (entprellten) Schalter, welcher ein weiteres LED 5 Mal blinken lässt,
+	wiederum mit HAL\_Delay realisiert. Die Priorität ist hier niedriger als beim Taster am
+	Board.
+\end{itemize}
+
+Wenn sich die Preemptive-Priorität sieht man hier folgendes:
+\begin{itemize}
+	\item Das Betätigen eines Tasters unterbricht den Blinker der main-Funktion.
+	\item Das Betätigen des Board-Tasters unterbricht das Blinken des externen Schalters, aber
+	nicht umgekehrt. Es wird hier angenommen, dass sich die Preemptive-Priorität der
+	beiden Schalter unterscheidet.
+\end{itemize} 
+Führe nun dieselbe Aufgabe noch einmal durch. Nun möge die preemptive-Priorität der
+beiden Schalter gleich sein, sie sollen aber unterschiedliche Sub-Priorität haben. In diesem
+Fall wird ein laufender Interrupt nicht unterbrochen, der andere Interrupt kommt erst nach
+Beendigung des ersten Interrupt s an die Reihe. Die unterschiedliche Sub-Priorität kann man
+folgendermaßen feststellen:
+\begin{itemize}
+	\item Betätige einen Schalter, sodass der entsprechende Blinker läuft.
+	\item Betätige nun beide Taster je einmal.
+	\item Nachdem die eine Blinksequenz fertig ist, wird der Interrupt mit der höheren Subpriorität
+	ausgewählt, unabhängig von der Reihenfolge, in welcher die beiden Schalter betätigt
+	wurden.
+\end{itemize}
+\subsection{Teil (f): Drei Blinklichter mit Systick-Interrupt-Steuerung}
+Realisiere die obige Aufgabe (drei Blinklichter, ein ewiges und zwei auf Tastendruck) nun
+noch einmal, dieses Mal jedoch ohne HAL\_Delay. Alle Blinker sollen mit dem SystickInterrupt
+gesteuert werden. In diesem Fall ist die Priorität der Interrupts egal, dabei jedem
+Interrupt der Mikrocontroller nur ganz kurze Zeit im Interrupt-Modus bleibt. Die mainFunktion
+enthält am Ende eine leere Endlosschleife, davor müssen die Interrupts und die
+LEDs konfiguriert werden.
+\clearpage

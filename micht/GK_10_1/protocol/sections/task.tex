@@ -1,0 +1,42 @@
+%!TEX root=../document.tex
+
+\section{Einführung}
+Diese Übung soll helfen die Grundlagen und Funktionsweise von verteilten Datenbanken und deren Entwurf zu verstehen. Das Thema wird mit dem Entwurf von verteilten Datenbanken begonnen und wird weiters mit der Umsetzung einer verteilten Datenbank auf einem lokalen Rechner umgesetzt.
+
+\subsection{Ziele}
+Das Ziel dieser Übung ist eine bestehende lokale Datenbank und deren DB Modell zu analysieren. Danach soll ein Konzept erstellt werden, um diese lokale Datenbank in eine verteilte Datenbank zu transformieren. Im ersten Schritt soll die Verteilung nur lokal anhand von DB Schemata durchgeführt werden.
+
+\subsection{Voraussetzungen}
+\begin{itemize}
+	\item Grundlagen von verteilten Datenbanken
+	\item Installation eines DBMS (Postgres, MySQL)
+	\item SQL Kenntnisse (Laden einer Datenbank, SELECT)
+\end{itemize}
+
+\subsection{Aufgabenstellung}
+Unter Verwendung der Sample Database "Dell DVD Store" soll eine lokale Datenbank in eine verteilte Datenbank transferiert werden. Mit dieser Aufgabe soll die Fragmentierung einer Datenbank durchgeführt werden. Basierend auf einer Tabelle/View des DVD Stores sollen folgende Fragmentierungsarten umgesetzt werden:
+
+\begin{itemize}
+	\item horizontale Fragmentierung nach mindestens 2 Kriterien
+	\item vertikale Fragmentierung
+	\item kombinierte Fragmentierung
+\end{itemize}
+Die Fragmente sollen jeweils in einem Schema mit der Bezeichnung
+
+\begin{itemize}
+	\item Schema horizontal
+	\item Schema vertical
+	\item Schema combination
+\end{itemize}
+in Tabellen mit sinnvollen Namen gespeichert werden. Die Fragmentierung soll sinnvoll unter selbst definierten Annahmen spezifiziert werden.
+
+Dokumentieren Sie Arbeitsschritte und die Definition Deiner Fragmente in einem Abgabeprotokoll.
+
+Im Anschluss soll zu jeder Fragmentierungsart ein SELECT Statement zum Sammeln aller Daten entworfen werden. Dabei soll gezeigt werden, dass durch die Verteilung keine Datensätze verloren gegangen sind. Verwenden Sie dazu "SELECT count(*) FROM ...."
+
+\begin{itemize}
+	\item Anzahl der Datensätze vor der Fragmentierung
+	\item Anzahl der Datensätze der einzelnen Fragmente
+	\item Anzahl der Datensätze aus dem SELECT statement, das alle Daten wieder zusammenfügt
+\end{itemize}
+\clearpage
